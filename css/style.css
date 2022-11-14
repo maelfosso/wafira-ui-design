@@ -347,3 +347,137 @@ section#discover-destinations .travels .item.montreal-lyon {
 section#discover-destinations .travels .item.dla-kigali {
     background-image: url("../images/travel-dla-kig.svg");;
 }
+
+/* Loved Hotels */
+section#loved-hotels {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    margin-bottom: 100px;
+}
+
+section#loved-hotels header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+section#loved-hotels header h2 {
+    line-height: 48px;
+    color: #29378C;
+    width: 50%;
+}
+
+section#loved-hotels header .consult {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    color: #1E40AF;
+}
+
+section#loved-hotels .hotels {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 13px;
+}
+
+section#loved-hotels .hotels .hotel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    flex: 1 1 32%;
+}
+
+section#loved-hotels .hotels .hotel .image {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 16px;
+    height: 320px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+section#loved-hotels .hotels .hotel .caption {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section#loved-hotels .hotels .hotel .caption .name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #27272A;
+}
+
+section#loved-hotels .hotels .hotel .caption .address {
+    font-size: 16px;
+    line-height: 120%;
+    color: #52525B;
+}
+
+section#loved-hotels .hotels .hotel .caption .stars {
+
+}
+
+section#loved-hotels .hotels .hotel .caption .see-more {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    gap: 12px;
+
+    border: 1px solid #93C5FD;
+    border-radius: 12px;
+    background-color: white;
+
+    font-size: 16px;
+    line-height: 120%;
+
+    color: #2563EB;
+    margin-top: 18px;
+}
+
+section#loved-hotels .hotels .hotel .caption .see-more:hover {
+    background: #2563EB;
+    color: white;
+}
+
+section#loved-hotels .hotels .hotel.st-jacques .image {
+    background-image: url("../images/residence-st-jacques.svg");
+}
+
+section#loved-hotels .hotels .hotel.bercy-village .image {
+    background-image: url("../images/hotel-bercy-village.svg");
+}
+
+section#loved-hotels .hotels .hotel.kemal .image {
+    background-image: url("../images/kemal-hotel.svg");
+}
+
+section#loved-hotels .hotels .hotel.beausejour .image {
+    background-image: url("../images/hotel-beausejour.svg");
+}
+
+section#loved-hotels .hotels .hotel.st-jacques-congo .image {
+    background-image: url("../images/residence-st-jacques-congo.svg");
+}
+
+section#loved-hotels .hotels .hotel.mikhael .image {
+    background-image: url("../images/mikhael-hotel.svg");
+}
