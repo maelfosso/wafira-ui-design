@@ -158,6 +158,7 @@ section#reservation-center {
     display: flex;
     flex-direction: row;
     padding: 40px 85px;
+    border-bottom: 1px solid #F4F4F5;
 }
 
 section#reservation-center h2 {
@@ -206,7 +207,6 @@ section#reservation-center #bloc-2 .items .item {
 }
 
 section#reservation-center #bloc-2 .bg-image {
-    position: absolute;
     z-index: 0;
     height: 100%;
 }
@@ -276,4 +276,74 @@ section#reservation-center #bloc-2 .items .item:nth-of-type(3) {
 
 section#reservation-center #bloc-2 .items .item:nth-of-type(3) .image {
     background-color: #93C5FD;
+}
+
+/* Discover Destination  */
+section#discover-destinations {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+}
+
+section#discover-destinations h2 {
+    line-height: 48px;
+    color: #29378C;
+    width: 50%;
+    margin-bottom: 26px;
+}
+
+section#discover-destinations .travels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 13px
+}
+
+section#discover-destinations .travels .item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    padding-bottom: 20px;
+    box-sizing: content-box;
+
+    flex: 1 1 24%;
+    height: 390px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 16px;
+}
+
+section#discover-destinations .travels .item.abidjan-paris {
+    background-image: url("../images/travel-ab-pa.svg");;
+}
+
+section#discover-destinations .travels .item.casa-caire {
+    background-image: url("../images/travel-casa-ca.svg");;
+}
+
+section#discover-destinations .travels .item.bangla-istan {
+    background-image: url("../images/travel-ban-ista.svg");;
+}
+
+section#discover-destinations .travels .item.banga-chennai {
+    background-image: url("../images/travel-ban-che.svg");;
+}
+
+section#discover-destinations .travels .item.londres-tokyo {
+    background-image: url("../images/travel-lon-tok.svg");
+    flex-basis: 45%;
+}
+
+section#discover-destinations .travels .item.montreal-lyon {
+    background-image: url("../images/travel-mon-lyon.svg");;
+}
+
+section#discover-destinations .travels .item.dla-kigali {
+    background-image: url("../images/travel-dla-kig.svg");;
 }
