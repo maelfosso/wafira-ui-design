@@ -88,3 +88,76 @@ header nav #others #sign button {
     line-height: 21px;
     color: #FFFFFF;
 }
+
+/* Section */
+section h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+/* Why US */
+section#why-us {
+    background: #3B82F6;
+    padding: 40px 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section#why-us .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+}
+
+section#why-us .content .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 12px 0px;
+    gap: 8px;
+}
+
+section#why-us .content .item .image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+
+    background: #2563EB;
+    border-radius: 100px;
+}
+
+section#why-us .content .item .title {
+    font-weight: 700;
+font-size: 24px;
+line-height: 140%;
+/* identical to box height, or 34px */
+
+text-align: center;
+
+/* green/50 */
+
+color: #F0FDF4;
+}
+
+section#why-us .content .item .description {
+    font-weight: 400;
+font-size: 14px;
+line-height: 120%;
+/* or 17px */
+
+text-align: center;
+
+/* green/50 */
+
+color: #F0FDF4;
+}
