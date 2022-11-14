@@ -14,3 +14,77 @@ body{
     font-family: 'Helvetica';
     font-style: normal;
 }
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 0px 0px 80px;
+    align-items: center;
+    background: #FFFFFF;
+    border-bottom: 1px solid #EFF6FF;
+    height: 80px;
+}
+
+header nav #menu {
+    display: flex;
+    justify-content: center;
+}
+
+header nav #menu ul {
+    display: flex;
+    list-style: none;
+    column-gap: 20px;
+}
+
+header nav #menu ul li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #27272A;
+}
+
+header nav #menu ul li .soon {
+    opacity: 0.5;
+}
+
+header nav #others {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0px 20px 0px 0px;
+}
+
+header nav #others ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    column-gap: 20px;
+}
+
+header nav #others ul li div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4px;
+}
+
+header nav #others #sign button {
+    padding: 8px 12px;
+    background: #1E40AF;
+    border: none;
+    border-radius: 12px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
