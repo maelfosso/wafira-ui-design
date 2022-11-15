@@ -416,6 +416,7 @@ section#reservation-center #bloc-2 .items .item .image {
     height: 40px;
     background: #DBEAFE;
     border-radius: 100px;
+    color: #2563EB
 }
 
 section#reservation-center #bloc-1 .items .item:nth-of-type(even) .image {
@@ -545,11 +546,21 @@ section#loved-hotels header h2 {
 }
 
 section#loved-hotels header .consult {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    text-decoration-line: underline;
     color: #1E40AF;
+}
+
+section#loved-hotels header .consult span {
+    text-decoration-line: underline;
 }
 
 section#loved-hotels .hotels {
@@ -900,4 +911,5 @@ footer .mentions .social-media {
     align-items: center;
     padding: 0px;
     gap: 12px;
+    color: #1E40AF;
 }
