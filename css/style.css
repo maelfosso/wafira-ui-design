@@ -189,6 +189,12 @@ header #hero .content .search .inputs .fields-1 {
     color: #27272A;
 }
 
+header #hero .content .search .inputs .fields-1 select {
+    border: none;
+    outline: none;
+    color: #71717A;
+}
+
 header #hero .content .search .inputs .fields-1 span {
     color: #71717A;
 }
@@ -232,12 +238,14 @@ header #hero .content .search .inputs .fields-2 .calendar > div {
     gap: 12px;
 }
 
-header #hero .content .search .inputs .fields-2 .location span,
-header #hero .content .search .inputs .fields-2 .calendar span {
+header #hero .content .search .inputs .fields-2 .location input,
+header #hero .content .search .inputs .fields-2 .calendar input {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     color: #A1A1AA;
+    border: none;
+    outline: none;
 }
 
 header #hero .content .search .inputs .fields-2 button {
