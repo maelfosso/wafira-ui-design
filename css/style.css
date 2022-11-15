@@ -574,3 +574,65 @@ section#faq .questions .question.open .header .icon {
 section#faq .questions .question.open .description {
     display: block;
 }
+
+/* Newsletter */
+section#newsletter {
+    background: #1E40AF;
+    padding: 30px 0;
+}
+
+section#newsletter .content {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    width: 43%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section#newsletter h2 {
+    font-size: 40px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin: 4px 0;
+}
+
+section#newsletter .subtitle {
+    font-size: 20px;
+    line-height: 23px;
+    color: #E4E4E7;
+}
+
+section#newsletter .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    margin-top: 18px;
+}
+
+section#newsletter .subscribe input {
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: none;
+    padding: 16px 12px;
+    width: 100%;
+}
+
+section#newsletter .subscribe button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 12px;
+    background: #1E40AF;
+    border-radius: 16px;
+    border: none;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 16px;
+}
