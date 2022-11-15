@@ -89,6 +89,180 @@ header nav #others #sign button {
     color: #FFFFFF;
 }
 
+header #hero {
+    height: calc(100vh - 80px);
+    background-color: black;
+}
+
+header #hero .content {
+    width: 60%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header #hero .content h1 {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+header #hero .content .search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+header #hero .content .search .top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 157px;
+    height: 38px;
+
+    border-radius: 0px;
+}
+
+header #hero .content .search .top .travels,
+header #hero .content .search .top .hotels {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+
+    background: #FFFFFF;
+    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+header #hero .content .search .top .active {
+    background: #1E40AF;
+    color: #FFFFFF;
+}
+
+header #hero .content .search .top .travels {
+    border-radius: 20px 0px 0px 0px;
+}
+
+header #hero .content .search .top .hotels {
+    border-radius: 0px 20px 0px 0px;
+}
+
+header #hero .content .search .inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    gap: 12px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D4D4D8;
+    border-radius: 0px 20px 20px 20px;
+}
+
+header #hero .content .search .inputs .fields-1 {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 15px;
+
+    border: none;
+    border-bottom: 1px solid #F4F4F5;
+    padding-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #27272A;
+}
+
+header #hero .content .search .inputs .fields-1 span {
+    color: #71717A;
+}
+
+header #hero .content .search .inputs .fields-1 i {
+    color: #A1A1AA;
+}
+
+header #hero .content .search .inputs .fields-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+header #hero .content .search .inputs .fields-2 > div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+}
+
+header #hero .content .search .inputs .fields-2 .location,
+header #hero .content .search .inputs .fields-2 .calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    color: #27272A;
+}
+
+header #hero .content .search .inputs .fields-2 .location > div,
+header #hero .content .search .inputs .fields-2 .calendar > div {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 12px;
+}
+
+header #hero .content .search .inputs .fields-2 .location span,
+header #hero .content .search .inputs .fields-2 .calendar span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #A1A1AA;
+}
+
+header #hero .content .search .inputs .fields-2 button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 8px;
+
+    background: #1E40AF;
+    border-radius: 46px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+header #hero .content .search .inputs .fields-2 button i {
+    color: #FFFFFF;
+}
+
+
 /* Section */
 section h2 {
     font-weight: 700;
