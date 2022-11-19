@@ -54,31 +54,129 @@
           <form>
             <fieldset>
               <div class="title">Fourchette de prix</div>
+              <div class="fields">
+                <div class="input">
+                  <label for="min-price">Prix minimum</label>
+                  <input type="text" id="min-price" value="€ 0"/>
+                </div>
+                <div class="input">
+                  <label for="max-price">Prix maximum</label>
+                  <input type="text" id="max-price" value="€ 4000"/>
+                </div>
+              </div>
             </fieldset>
+            <div class="line">
+              <fieldset>
+                <div class="title">Heure de départ</div>
+                <div class="fields">
+                  <div class="checkbox">
+                    <input type="checkbox" id="0-arret"/>
+                    <label for="12-6-am">12-6 AM</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="1-arret"/>
+                    <label for="6-12-pm">6-12 PM</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="01-arreter"/>
+                    <label for="12-6-pm">12-6 PM</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="01-arreter"/>
+                    <label for="6-12-am">6-12 AM</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="title">Heure d'arrivée</div>
+                <div class="fields">
+                  <div class="checkbox">
+                    <input type="checkbox" id="0-arret"/>
+                    <label for="12-6-am">12-6 AM</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="1-arret"/>
+                    <label for="6-12-pm">6-12 PM</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="01-arreter"/>
+                    <label for="12-6-pm">12-6 PM</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="01-arreter"/>
+                    <label for="6-12-am">6-12 AM</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
             <fieldset>
-              <div class="title">Nombres d’arrêts</div>
+              <div class="title">Nombres d'arrêts</div>
+              <div class="fields">
+                <div class="checkbox">
+                  <input type="checkbox" id="0-arret"/>
+                  <label for="0-arret">0 arrêt</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="1-arret"/>
+                  <label for="1-arret">1 arrêt</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="01-arreter"/>
+                  <label for="01-arreter">+01 arrêter</label>
+                </div>
+              </div>
             </fieldset>
             <fieldset>
               <div class="title">Compagnie aérienne</div>
+              <div class="fields">
+                <div class="checkbox">
+                  <input type="checkbox" id="airfrance"/>
+                  <label for="airfrance">AirFrance</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="swiss"/>
+                  <label for="swiss">Swiss</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="alitalia"/>
+                  <label for="alitalia">Alitalia</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="quatar-airways"/>
+                  <label for="quatar-airways">Qatar Airways</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="turkish-airlines"/>
+                  <label for="turkish-airlines">Turkish Airlines</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="brussels-airlines"/>
+                  <label for="brussels-airlines">Brussels Airlines</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="emirates-airlines"/>
+                  <label for="emirates-airlines">Emirates Airlines</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="ethiopian-airlines"/>
+                  <label for="ethiopian-airlines">Ethiopian Airlines</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="helvetic"/>
+                  <label for="helvetic">Helvetic Airways Ag</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="united-airlines"/>
+                  <label for="united-airlines">United Airlines</label>
+                </div>
+              </div>
             </fieldset>
+            <div class="buttons">
+              <button class="light">Reinitialiser</button>
+              <button>Afficher 442 résultats</button>
+            </div>
           </form>
         </div>
-        <!-- <div class="login-from-sm">
-          <div>Ou connectez-vous avec</div>
-          <button type="button" class="facebook"><i class="fa-brands fa-facebook fa-lg"></i> Continuer avec Facebook</button>
-          <button type="button" class="google"><img src="{{ URL::asset('assets/images/google-icon.svg') }}" alt="google icon" /> Continuer avec Google</button>
-        </div> -->
-        <footer>
-          <button>Reinitialiser</button>
-        </footer>
-        <!-- <article id="login">
-        </article>
-        <article id="registration">
-          <header>
-            <h2>{{ __('Registration') }}</h2>
-            <p>Gérez et consultez à tout moment vos différents billets et hôtels reservés sur Warfira.</p>
-          </header>
-        </article> -->
       </div>
     <section>
     <footer>

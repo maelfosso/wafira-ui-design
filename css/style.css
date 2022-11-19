@@ -471,9 +471,33 @@ header #hero .content .search .inputs .fields-2 button i {
   color: #FFFFFF;
 }
 
+.line {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 8px;
+  background: #1E40AF;
+  border-radius: 12px;
+  border: none;
+  color: #FFFFFF;
+}
+
 button.icon {
   border: none;
   background: none;
+}
+
+button.light {
+  color: #1E40AF;
+  background: #FFFFFF;
+  font-weight: 700;
 }
 
 a {
@@ -2102,7 +2126,7 @@ section#flights-search-filters header p {
 section#flights-search-filters .content .filters {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   padding: 20px;
   gap: 32px;
   
@@ -2113,8 +2137,8 @@ section#flights-search-filters .content .filters {
 section#flights-search-filters .content .filters form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
+  /* align-items: flex-start; */
+  /* padding: 20px; */
   gap: 32px;
 
   background: #FFFFFF;
@@ -2124,9 +2148,10 @@ section#flights-search-filters .content .filters form {
 section#flights-search-filters .content .filters form fieldset {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   padding: 0px;
   gap: 8px;
+  border: none;
 }
 
 section#flights-search-filters .content .filters form fieldset .title {
@@ -2134,4 +2159,64 @@ section#flights-search-filters .content .filters form fieldset .title {
   line-height: 120%;
 
   color: #27272A;
+}
+
+section#flights-search-filters .content .filters form fieldset .fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+section#flights-search-filters .content .filters form fieldset .fields .input {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 4px 12px;
+
+  width: 49%;
+  border: 1px solid #2563EB;
+  border-radius: 12px;
+}
+
+section#flights-search-filters .content .filters form fieldset .fields .checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 48%;
+}
+
+section#flights-search-filters .content .filters form fieldset .fields .checkbox label {
+  font-size: 14px;
+  line-height: 120%;
+  color: #71717A;
+}
+
+section#flights-search-filters .content .filters form fieldset .fields .input label {
+  font-size: 16px;
+  line-height: 24px;
+  color: #A1A1AA;
+}
+
+section#flights-search-filters .content .filters form fieldset .fields .input input {
+  font-size: 14px;
+  line-height: 120%;
+  color: #27272A;
+  border: none;
+  outline: none;
+}
+
+section#flights-search-filters .content .filters form .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
