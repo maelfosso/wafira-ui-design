@@ -2112,9 +2112,10 @@ section#flights-search-filters .content {
 }
 
 section#flights-search-filters header h2 {
-  font-size: 28px;
+  font-size: 27px;
   line-height: 120%;
   color: #1E3A8A;
+  font-weight: 400;
 }
 
 section#flights-search-filters header p {
@@ -2179,7 +2180,8 @@ section#flights-search-filters .content .filters form fieldset .fields .input {
   /* align-items: flex-start; */
   padding: 4px 12px;
 
-  width: 49%;
+  /* width: 49%; */
+  flex-grow: 1;
   border: 1px solid #2563EB;
   border-radius: 12px;
 }
@@ -2190,7 +2192,9 @@ section#flights-search-filters .content .filters form fieldset .fields .checkbox
   align-items: center;
   padding: 0px;
   gap: 8px;
-  width: 48%;
+  flex-grow: 1;
+  flex-basis: 49%;
+  /* width: 48%; */
 }
 
 section#flights-search-filters .content .filters form fieldset .fields .checkbox label {
@@ -2219,4 +2223,20 @@ section#flights-search-filters .content .filters form .buttons {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  section#flights-search-filters .content {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  section#flights-search-filters .content .filters form fieldset .fields .checkbox {
+    flex-basis: 33%;
+  }
+
+  section#flights-search-filters .content .filters form .line {
+    flex-direction: column;
+    gap: 32px;
+  }
 }
