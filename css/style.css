@@ -471,9 +471,24 @@ header #hero .content .search .inputs .fields-2 button i {
   color: #FFFFFF;
 }
 
+.w-half {
+  width: 50% !important;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .line {
   display: flex;
   flex-direction: row;
+  gap: 8px;
+}
+
+.line > * {
+  flex-grow: 1;
 }
 
 button {
@@ -2778,6 +2793,229 @@ section#booking-flight .nav {
   /* align-items: flex-start; */
   padding: 0px;
   gap: 8px;
+}
+
+section#booking-flight .step-passengers {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 20px;
+}
+
+
+section#booking-flight .step-passengers .content form {
+  flex-grow: 1;
+}
+
+section#booking-flight .step-passengers .content {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 20px;
+}
+
+section#booking-flight .step-passengers .header h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  color: #29378C;
+}
+
+section#booking-flight .step-passengers form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+section#booking-flight .step-passengers form fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+  border: none;
+}
+
+section#booking-flight .step-passengers form fieldset .field {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+}
+
+section#booking-flight .step-passengers form fieldset h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+section#booking-flight .step-passengers form fieldset div label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #52525B;
+}
+
+section#booking-flight .step-passengers form fieldset div .input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 4px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+}
+
+section#booking-flight .step-passengers form fieldset div .input.suffix.button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+section#booking-flight .step-passengers form fieldset div .input.suffix.button input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 4px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+}
+
+section#booking-flight .step-passengers form fieldset > div .input input,
+section#booking-flight .step-passengers form fieldset > div .input select {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+section#booking-flight .step-passengers form fieldset > div .input input {
+  width: 100%;
+}
+
+section#booking-flight .step-passengers form fieldset > div .input select,
+section#booking-flight .step-passengers form fieldset > div .input i {
+  width: auto;
+}
+section#booking-flight .step-passengers form fieldset > div .input.prefix {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+
+  color: #A1A1AA;
+
+}
+
+section#booking-flight .step-passengers form fieldset > div .input.prefix i {
+  color: #A1A1AA;
+}
+
+section#booking-flight .step-passengers .content .fees-details {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 16px;
+  /* gap: 32px; */
+
+  background: #FFFFFF;
+
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  height: min-content;
+}
+
+section#booking-flight .step-passengers .content .fees-details > div {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* padding: 16px; */
+  gap: 32px;
+}
+
+section#booking-flight .step-passengers .content .fees-details > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+section#booking-flight .step-passengers .content .fees-details > div > div .more > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #52525B;
+}
+
+section#booking-flight .step-passengers .content .fees-details > div:first-child .price .more .amount {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+section#booking-flight .step-passengers .content .fees-details > div:first-child .price > div:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+
+  color: #1E3A8A;
+}
+
+section#booking-flight .step-passengers .content hr {
+  background: #E4E4E7;
+  height: 1;
+  margin: 5px 0;
+}
+
+section#booking-flight .step-passengers .content > div:first-child .details > div:first-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+
+  color: #27272A;
+}
+
+/* section#booking-flight .step-passengers .content > div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 140px;
+} */
+section#booking-flight .step-passengers .content .fees-details > div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: cen ter; */
+  padding: 0px;
+  gap: 140px;
+}
+
+section#booking-flight .step-passengers .content .fees-details > div:last-child > span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1E40AF;
 }
 
 @media only screen and (max-width: 768px) {
