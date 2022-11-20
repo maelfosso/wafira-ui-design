@@ -500,6 +500,16 @@ button.light {
   font-weight: 700;
 }
 
+button.white {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #52525B;
+  background: white;
+  border: 1px solid #A1A1AA;
+  border-radius: 12px;
+}
+
 a {
   text-decoration: none;
 }
@@ -2238,5 +2248,540 @@ section#flights-search-filters .content .filters form .buttons {
   section#flights-search-filters .content .filters form .line {
     flex-direction: column;
     gap: 32px;
+  }
+}
+
+/* BOOKING FLIGHT  */
+
+#booking-flight {
+  padding: 40px 80px;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* padding: 0px; */
+  gap: 32px;
+}
+
+section#booking-flight .step-details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+section#booking-flight #flight {
+  background: #EFF6FF;
+  border-bottom: 1px solid #F4F4F5;
+  border-radius: 16px;
+  padding: 8px 12px 20px;
+
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+section#booking-flight #flight hr {
+  height: 1px;
+  background: #A1A1AA;
+  margin: 12px 0;
+}
+
+section#booking-flight #flight .data {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+  /* background: #FAFAFA; */
+  /* border-bottom: 1px solid #F4F4F5;
+  border-radius: 16px; */
+}
+
+section#booking-flight #flight .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 4px;
+}
+
+section#booking-flight #flight .fees {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  /* gray/800 */
+
+  color: #27272A;
+}
+
+section#booking-flight #flight .passengers {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  /* gray/500 */
+
+  color: #71717A;
+}
+
+section#booking-flight #flight .items {
+  flex-grow: 1;
+}
+
+section#booking-flight #flight .data .content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 12px;
+  flex: 1;
+}
+
+section#booking-flight #flight .data .content .details {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 8px;
+}
+
+section#booking-flight #flight .data .content .details > div {
+  flex-grow: 1;
+  align-self: center;
+}
+
+section#booking-flight #flight .data .content .details .departure,
+section#booking-flight #flight .data .content .details .stop,
+section#booking-flight #flight .data .content .details .destination {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  /* gap: 34px; */
+}
+
+section#booking-flight #flight .data .content .details .stop > div:first-child {
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
+  color: #27272A;
+}
+
+section#booking-flight #flight .data .content .details .departure > div:first-child,
+section#booking-flight #flight .data .content .details .destination > div:first-child {
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+
+  color: #2563EB;
+}
+
+section#booking-flight #flight .data .content .details .departure > div:last-child,
+section#booking-flight #flight .data .content .details .stop > div:last-child,
+section#booking-flight #flight .data .content .details .destination > div:last-child{
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
+  color: #A1A1AA;
+}
+
+section#booking-flight #flight .data .content div:last-child a {
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+
+  color: #1E40AF;
+}
+section#booking-flight #flight .data .book-it-now {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+section#booking-flight #flight .data .book-it-now div:first-child {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 4px;
+}
+
+section#booking-flight #flight .data .book-it-now .amount {
+  font-size: 20px;
+  line-height: 23px;
+
+  display: flex;
+  align-items: center;
+
+  color: #27272A;
+}
+
+section#booking-flight #flight .data .book-it-now .back {
+  font-size: 14px;
+  line-height: 16px;
+
+  display: flex;
+  align-items: center;
+
+  color: #71717A;
+}
+
+section#booking-flight #flight .data .book-it-now button {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+
+  border: 1px solid #2563EB;
+  border-radius: 12px;
+
+  font-size: 16px;
+  line-height: 120%;
+  width: 100%;
+
+  color: #2563EB;
+}
+
+section#booking-flight #flight .data.with-stops {
+  background: #EFF6FF;
+}
+
+section#booking-flight #flight .data .content .details.first {
+  padding: 4px 8px 8px;
+  background: #DBEAFE;
+
+  border-bottom: 1px solid #BFDBFE;
+  border-radius: 12px;
+}
+
+section#booking-flight #flight .data.with-stops .book-it-now button {
+  color: #FFFFFF;
+  border: none;
+  background: #1E40AF;
+  border-radius: 12px;
+}
+
+section#booking-flight .details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+section#booking-flight .details .flight-details {
+  flex-grow: 1;
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 40px;
+}
+
+section#booking-flight .details .flight-details .type {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 20px;
+}
+
+section#booking-flight .details .flight-details .header h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+
+  color: #27272A;
+}
+
+section#booking-flight .details .flight-details .header div {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+
+  color: #52525B;
+}
+
+section#booking-flight .details .flight-details .items {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+}
+
+section#booking-flight .details .flight-details .items .note {
+  font-size: 16px;
+  line-height: 18px;
+  color: #2563EB;
+}
+
+section#booking-flight .details .flight-details .items .data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 12px 12px 0px;
+  gap: 20px;
+  
+  border-bottom: 1px solid #BFDBFE;
+  /* border-radius: 12px; */
+}
+
+section#booking-flight .details .flight-details .items .data .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 34px; */
+}
+
+section#booking-flight .details .flight-details .items .data .content > div {
+  /* display: flex;
+  flex-direction: row; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 34px;
+}
+
+section#booking-flight .details .flight-details .items .data .content > div > div {
+  flex-grow: 1;
+}
+
+section#booking-flight .details .flight-details .items .data .content > div:first-child > div {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+
+  color: #27272A;
+}
+
+section#booking-flight .details .flight-details .items .data .content > div:first-child > div:last-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+
+  color: #2563EB;
+}
+
+section#booking-flight .details .flight-details .items .data .content > div:last-child > div {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+
+  color: #A1A1AA;
+}
+section#booking-flight .details .flight-details .items .data > div {
+  flex-grow: 1;
+}
+
+section#booking-flight .details .flight-details .items .data > div:nth-child(n+2) div:first-child {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
+  color: #27272A;
+}
+
+section#booking-flight .details .flight-details .items .data > div:nth-child(n+2) div:last-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
+  color: #A1A1AA;
+}
+
+section#booking-flight .details .flight-details .items .data > div:last-child div:first-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+
+  color: #2563EB;
+}
+
+section#booking-flight .details .fees-details {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 16px;
+  /* gap: 32px; */
+
+  background: #FFFFFF;
+
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+
+section#booking-flight .details .fees-details > div {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* padding: 16px; */
+  gap: 32px;
+}
+
+section#booking-flight .details .fees-details > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+section#booking-flight .details .fees-details > div > div .more > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #52525B;
+}
+
+section#booking-flight .details .fees-details > div:first-child .price .more .amount {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+section#booking-flight .details .fees-details > div:first-child .price > div:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+
+  color: #1E3A8A;
+}
+
+section#booking-flight .details .fees-details hr {
+  background: #E4E4E7;
+  height: 1;
+  margin: 5px 0;
+}
+
+section#booking-flight .details .fees-details > div:first-child .details > div:first-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+
+  color: #27272A;
+}
+
+section#booking-flight .details .fees-details > div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 140px;
+}
+
+section#booking-flight .details .fees-details > div:last-child > span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1E40AF;
+}
+
+section#booking-flight .insurance {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 16px;
+}
+
+section#booking-flight .insurance .header {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+}
+
+section#booking-flight .insurance .header h2 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  display: flex;
+
+  color: #27272A;
+}
+
+section#booking-flight .insurance .header div {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  /* align-items: center; */
+  text-transform: lowercase;
+  color: #52525B;
+}
+
+section#booking-flight .insurance .choices {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 4px;
+}
+
+section#booking-flight .insurance .choices .input label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+section#booking-flight .nav {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  section#booking-flight {
+
   }
 }
