@@ -2803,7 +2803,6 @@ section#booking-flight .step-passengers {
   gap: 20px;
 }
 
-
 section#booking-flight .step-passengers .content form {
   flex-grow: 1;
 }
@@ -3016,6 +3015,124 @@ section#booking-flight .step-passengers .content .fees-details > div:last-child 
   font-size: 20px;
   line-height: 140%;
   color: #1E40AF;
+}
+
+section#booking-flight .step-payment {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 20px;
+}
+
+
+section#booking-flight .step-payment .content form {
+  flex-grow: 1;
+}
+
+section#booking-flight .step-payment .content {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 20px;
+}
+
+section#booking-flight .step-payment .header h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  color: #29378C;
+}
+
+section#booking-flight .step-payment .content form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+section#booking-flight .step-payment .content form fieldset {
+  border: none;
+}
+
+section#booking-flight .step-payment form fieldset .field {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+}
+
+section#booking-flight .step-payment form fieldset div label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #52525B;
+}
+
+section#booking-flight .step-payment form fieldset div .input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 4px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+}
+
+section#booking-flight .step-payment form fieldset .field .checkbox {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  padding: 12px;
+  gap: 12px;
+}
+
+section#booking-flight .step-payment form fieldset .field .checkbox.border {
+
+  border: 1px solid #E4E4E7;
+  border-radius: 10px;
+}
+
+section#booking-flight .step-payment form fieldset.border {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 12px;
+  gap: 12px;
+
+  border: 2px solid #2563EB;
+  border-radius: 10px;
+}
+
+section#booking-flight .step-payment form fieldset.border .checkbox {
+  padding: 0;
+  align-self: flex-start  ;
+}
+
+section#booking-flight .step-payment form fieldset.border input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+}
+
+section#booking-flight .step-payment form > .field.text label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+section#booking-flight .step-payment form > .field.text {
+  color: #52525B;
 }
 
 @media only screen and (max-width: 768px) {
