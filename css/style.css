@@ -2278,6 +2278,90 @@ section#flights-search-filters .content .filters form .buttons {
   gap: 32px;
 }
 
+section#booking-flight header {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  padding: 0px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #D4D4D8;
+  border-radius: 16px 16px 0px 0px;
+}
+
+section#booking-flight header .step {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  /* padding: 20px 24px; */
+}
+section#booking-flight header .step:first-of-type {
+  padding-left: 16px;
+}
+
+section#booking-flight header .step .id {
+  background: #2563EB;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  color: #FFFFFF;
+}
+
+section#booking-flight header .step span {
+  display: block;
+}
+
+section#booking-flight header .step i {
+  display: none;
+}
+
+section#booking-flight header .step .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+}
+
+section#booking-flight header .step .desc .title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+
+  text-transform: uppercase;
+
+  color: #27272A;
+}
+
+section#booking-flight header .step .desc .subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #71717A;
+}
+
+section#booking-flight header .step.active {
+  border-bottom: 4px solid #2563EB;
+}
+
+section#booking-flight header .step.active span {
+  display: none;
+}
+
+section#booking-flight header .step.active i {
+  display: block;
+}
+
 section#booking-flight .step-details {
   display: flex;
   flex-direction: column;
