@@ -44,52 +44,124 @@
         <div class="overlay"></div>
         <div class="content">
           <div class="search">
-            <div class="top">
-              <div class="travels active">Vols</div>
-              <div class="hotels">Hotels</div>
-            </div>
+            <ul class="top">
+              <li class=""><a href="#one-way">One Way</a></li>
+              <li class=""><a href="#roundtrip-return">Roundtrip / Return</a></li>
+              <li class=""><a href="#multi-city">Multi-city</a></li>
+            </ul>
             <div class="inputs">
-              <div class="fields-1">
-                <div>
-                  Aller-Retour
-                  <!-- <i class="fa-solid fa-angle-down"></i> -->
-                  <select>
-                    <option></option>
-                  </select>
+              <div id="one-way" class="fields">
+                <div class="content">
+                  <div class="from">
+                    From
+                    <div>
+                      <input type="text" placeholder="Type Departure City" />
+                    </div>
+                  </div>
+                  <div class="to">
+                    To
+                    <div>
+                      <input type="text" placeholder="Type Destination City" />
+                    </div>
+                  </div>
+                  <div>
+                    Departure
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
+                  <div>
+                    Return
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
+                  <div>
+                    Traveler
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
                 </div>
-                <div>
-                  Nombre de voyageurs
-                  <!-- <span>(01)</span> <i class="fa-solid fa-angle-down"></i> -->
-                  <select>
-                    <option>01</option>
-                  </select>
-                </div>
-                <div>
-                  Classe 
-                  <!-- <span>(économique)</span> <i class="fa-solid fa-angle-down"></i> -->
-                  <select>
-                    <option>économique</option>
-                  </select>
+                <div class="buttons">
+                  <button type="button"><i class="fa-solid fa-magnifying-glass"></i> Rechercher</button>
                 </div>
               </div>
-              <div class="fields-2">
-                <div>
-                  <div class="location">
-                    Localisation
+              <div id="roundtrip-return" class="fields">
+                <div class="content">
+                  <div class="from">
+                    From
                     <div>
-                      <input type="text" placeholder="Ville de départ" />
-                      <input type="text" placeholder="Ville d'arrivée" />
+                      <input type="text" placeholder="Type Departure City" />
                     </div>
                   </div>
-                  <div class="calendar">
-                    Calendrier
+                  <div class="to">
+                    To
                     <div>
-                      <input type="text" placeholder="Date de départ" />
-                      <input type="text" placeholder="Date de rétour" />
+                      <input type="text" placeholder="Type Destination City" />
                     </div>
+                  </div>
+                  <div>
+                    Departure
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
+                  <div>
+                    Return
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
+                  <div>
+                    Traveler
+                    <select>
+                      <option></option>
+                    </select>
                   </div>
                 </div>
-                <div>
+                <div class="buttons">
+                  <button type="button"><i class="fa-solid fa-magnifying-glass"></i> Rechercher</button>
+                </div>
+              </div>
+              <div id="multi-city" class="fields">
+                <div class="content">
+                  <div class="from">
+                    From
+                    <div>
+                      <input type="text" placeholder="Type Departure City" />
+                    </div>
+                    <div>
+                      <input type="text" placeholder="Type Departure City" />
+                    </div>
+                  </div>
+                  <div class="to">
+                    To
+                    <div>
+                      <input type="text" placeholder="Type Destination City" />
+                    </div>
+                    <div>
+                      <input type="text" placeholder="Type Destination City" />
+                    </div>
+                  </div>
+                  <div>
+                    Departure
+                    <select>
+                      <option></option>
+                    </select>
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
+                  <div>
+                    Traveler
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <button type="button" class="more-filters">Plus de filtre <i class="fa-solid fa-plus"></i></button>
                   <button type="button"><i class="fa-solid fa-magnifying-glass"></i> Rechercher</button>
                 </div>
               </div>
