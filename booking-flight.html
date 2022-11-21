@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://kit.fontawesome.com/021511bd83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -43,9 +46,9 @@
         </div>
       </nav>
     </header>
-    <section id="booking-flight">
-      <header>
-        <div class="step active">
+    <section class="step-app" id="booking-flight">
+      <header class="step-steps">
+        <div class="step active" data-step-target="details">
           <div class="id">
             <span>1</span>
             <i class="fa-solid fa-check"></i>
@@ -55,7 +58,7 @@
             <div class="subtitle">Récapitulatif et détails de votre reservation</div>
           </div>
         </div>
-        <div class="step">
+        <div class="step" data-step-target="passengers">
           <div><img src="images/chevron-center.svg" alt="chevron-center" /></div>
           <div class="id">
             <span>1</span>
@@ -66,7 +69,7 @@
             <div class="subtitle">Cursus semper viverra.</div>
           </div>
         </div>
-        <div class="step">
+        <div class="step" data-step-target="payment">
           <div><img src="images/chevron-center.svg" alt="chevron-center" /></div>
           <div class="id">
             <span>1</span>
@@ -78,451 +81,453 @@
           </div>
         </div>
       </header>
-      <div class="step-details">
-        <div id="flight">
-          <div class="items">
-            <div class="data">
-              <div class="content">
-                <div class="details">
-                  <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
-                  <div class="departure">
-                    <div>10h:00</div>
-                    <div>Kigali (RW)</div>
-                  </div>
-                  <div class="stop">
-                    <div>0 stop</div>
-                    <div>15h50min à Instanbul</div>
-                  </div>
-                  <div class="destination">
-                    <div>23h:40</div>
-                    <div>Casablanca (MRC)</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="data">
-              <div class="content">
-                <div class="details">
-                  <div><img src="images/ethiopian-airlines.svg" alt="ethiopian airlines" /></div>
-                  <div class="departure">
-                    <div>10h:00</div>
-                    <div>Kigali (RW)</div>
-                  </div>
-                  <div class="stop">
-                    <div>0 stop</div>
-                    <div>15h50min à Instanbul</div>
-                  </div>
-                  <div class="destination">
-                    <div>23h:40</div>
-                    <div>Casablanca (MRC)</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="infos">
-            <div class="fees">Montant 3034 €</div>
-            <div class="passengers">04 voyageurs : 03 adultes, 01 enfants</div>
-          </div>
-        </div>
-        <div class="details">
-          <div class="flight-details">
-            <div class="type outbound">
-              <div class="header">
-                <h2>Vol aller - Paris Douala (19h 41m)</h2>
-                <div>Vendredi 21 octobre 2022</div>
-              </div>
-              <div class="items">
-                <div class="data">
-                  <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
-                  <div class="departure">
-                    <div>
-                      21 octobre 2022,<br />
-                      20h : 45
+      <div class="step-content">
+        <div class="step-tab-panel step-details" data-step="details">
+          <div id="flight">
+            <div class="items">
+              <div class="data">
+                <div class="content">
+                  <div class="details">
+                    <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
+                    <div class="departure">
+                      <div>10h:00</div>
+                      <div>Kigali (RW)</div>
                     </div>
-                    <div>Paris (CDG)</div>
-                  </div>
-                  <div class="stop">
-                    <div>
-                      21 octobre 2022,<br />
-                      21h : 55
+                    <div class="stop">
+                      <div>0 stop</div>
+                      <div>15h50min à Instanbul</div>
                     </div>
-                    <div>Geneva(GVA)</div>
-                  </div>
-                  <div class="duration">
-                    <div>
-                      Durée du vol : 01h 10m
-                    </div>
-                    <div>
-                      01 arrêt de 10h 20m
+                    <div class="destination">
+                      <div>23h:40</div>
+                      <div>Casablanca (MRC)</div>
                     </div>
                   </div>
                 </div>
-                <div class="data">
-                  <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
-                  <div class="departure">
-                    <div>
-                      21 octobre 2022,<br />
-                      20h : 45
+              </div>
+              <hr />
+              <div class="data">
+                <div class="content">
+                  <div class="details">
+                    <div><img src="images/ethiopian-airlines.svg" alt="ethiopian airlines" /></div>
+                    <div class="departure">
+                      <div>10h:00</div>
+                      <div>Kigali (RW)</div>
                     </div>
-                    <div>Paris (CDG)</div>
-                  </div>
-                  <div class="stop">
-                    <div>
-                      21 octobre 2022,<br />
-                      21h : 55
+                    <div class="stop">
+                      <div>0 stop</div>
+                      <div>15h50min à Instanbul</div>
                     </div>
-                    <div>Geneva(GVA)</div>
-                  </div>
-                  <div class="duration">
-                    <div>
-                      Durée du vol : 01h 10m
-                    </div>
-                    <div>
-                      01 arrêt de 10h 20m
+                    <div class="destination">
+                      <div>23h:40</div>
+                      <div>Casablanca (MRC)</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="type return">
-              <div class="header">
-                <h2>Vol retour - Douala Paris (16h 20m)</h2>
-                <div>Samedi 29 octobre 2022</div>
-              </div>
-  
-              <div class="items">
-                <div class="data">
-                  <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
-                  <div class="departure">
-                    <div>
-                      21 octobre 2022,<br />
-                      20h : 45
-                    </div>
-                    <div>Paris (CDG)</div>
-                  </div>
-                  <div class="stop">
-                    <div>
-                      21 octobre 2022,<br />
-                      21h : 55
-                    </div>
-                    <div>Geneva(GVA)</div>
-                  </div>
-                  <div class="duration">
-                    <div>
-                      Durée du vol : 01h 10m
-                    </div>
-                    <div>
-                      01 arrêt de 10h 20m
-                    </div>
-                  </div>
-                </div>
-                <div class="note">
-                  Ce Vol a une escale technique à NSI 1 heure 15 minutes
-                </div>
-                <div class="data">
-                  <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
-                  <div class="departure">
-                    <div>
-                      21 octobre 2022,<br />
-                      20h : 45
-                    </div>
-                    <div>Paris (CDG)</div>
-                  </div>
-                  <div class="stop">
-                    <div>
-                      21 octobre 2022,<br />
-                      21h : 55
-                    </div>
-                    <div>Geneva(GVA)</div>
-                  </div>
-                  <div class="duration">
-                    <div>
-                      Durée du vol : 01h 10m
-                    </div>
-                    <div>
-                      01 arrêt de 10h 20m
-                    </div>
-                  </div>
-                </div>
-                <div class="data">
-                  <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
-                  <div class="departure">
-                    <div>
-                      21 octobre 2022,<br />
-                      20h : 45
-                    </div>
-                    <div>Paris (CDG)</div>
-                  </div>
-                  <div class="stop">
-                    <div>
-                      21 octobre 2022,<br />
-                      21h : 55
-                    </div>
-                    <div>Geneva(GVA)</div>
-                  </div>
-                  <div class="duration">
-                    <div>
-                      Durée du vol : 01h 10m
-                    </div>
-                    <div>
-                      01 arrêt de 10h 20m
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="infos">
+              <div class="fees">Montant 3034 €</div>
+              <div class="passengers">04 voyageurs : 03 adultes, 01 enfants</div>
             </div>
           </div>
-          <div class="fees-details">
-            <div>
-              <div class="price">
-                <div>Tarifs de base</div>
-                <div class="more">
-                  <div class="adult">
-                    <div class="count">3 adultes</div>
-                    <div class="amount">1841 €</div>
-                  </div>
-                  <div class="child">
-                    <div class="count">01 enfant</div>
-                    <div class="amount">276 €</div>
-                  </div>
+          <div class="details">
+            <div class="flight-details">
+              <div class="type outbound">
+                <div class="header">
+                  <h2>Vol aller - Paris Douala (19h 41m)</h2>
+                  <div>Vendredi 21 octobre 2022</div>
                 </div>
-              </div>
-              <div class="">
-                <div>Détails</div>
-                <div class="more">
-                  <div class="tax">
-                    <div>Taxe</div>
-                    <div>1841 €</div>
-                  </div>
-                  <div class="fees">
-                    <div>Frais de commodité</div>
-                    <div>276 €</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div>
-              <span>Montant Total</span>
-              <span>3034 €</span>
-            </div>
-          </div>
-        </div>
-        <div class="insurance">
-          <div class="header">
-            <h2>Assurez votre voyage</h2>
-            <div>40% DE NOS CLIENTS ASSURENT LEUR VOYAGE. VOIR TOUS LES AVANTAGES QUE VOUS OBTENEZ POUR SEULEMENT RS.</div>
-          </div>
-          <div class="choices">
-            <div class="input">
-              <input type="radio" name="insurance" id="insurance-yes" value="yes" />
-              <label for="insurance-yes">Oui, sécuriser mon voyage avec une assurance. je suis d'accord avec le Conditions générales</label>
-            </div>
-            <div class="input">
-              <input type="radio" name="insurance" id="insurance-no" value="no" />
-              <label for="insurance-no">Non, je ne veux pas assurer mon voyage</label>
-            </div>
-          </div>
-        </div>
-        <div class="nav">
-          <button class="">Suivant</button>
-          <button class="white">Annulez</button>
-        </div>
-      </div>
-      <div class="step-passengers">
-        <div class="header">
-          <h1>Informations des passagers</h1>
-        </div>
-        <div class="content">
-          <form>
-            <fieldset>
-              <h2>S'il vous plaît entrer les noms des clients</h2>
-              <div class="field">
-                <label>Vous avez un e-coupon ou un code d'accord ? (Facultatif)</label>
-                <div class="input suffix button">
-                  <input type="text" class="w-half"/>
-                  <button>Validez votre code</button>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset>
-              <h2>S'il vous plaît entrer les noms des clients</h2>
-              <div class="group">
-                <div class="field">
-                  <label>Votre genre</label>
-                  <div class="input prefix select">
-                    <select>
-                      <option>Mr</option>
-                      <option>Mme</option>
-                      <option>Mlle</option>
-                    </select>
-                    <input type="text" />
-                  </div>
-                </div>
-                <div class="line">
-                  <div class="field">
-                    <label>Votre prénom</label>
-                    <div class="input">
-                      <input type="text" />
+                <div class="items">
+                  <div class="data">
+                    <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
+                    <div class="departure">
+                      <div>
+                        21 octobre 2022,<br />
+                        20h : 45
+                      </div>
+                      <div>Paris (CDG)</div>
+                    </div>
+                    <div class="stop">
+                      <div>
+                        21 octobre 2022,<br />
+                        21h : 55
+                      </div>
+                      <div>Geneva(GVA)</div>
+                    </div>
+                    <div class="duration">
+                      <div>
+                        Durée du vol : 01h 10m
+                      </div>
+                      <div>
+                        01 arrêt de 10h 20m
+                      </div>
                     </div>
                   </div>
-                  <div class="field">
-                    <label>Votre nom de famille</label>
-                    <div class="input">
-                      <input type="text" />
+                  <div class="data">
+                    <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
+                    <div class="departure">
+                      <div>
+                        21 octobre 2022,<br />
+                        20h : 45
+                      </div>
+                      <div>Paris (CDG)</div>
+                    </div>
+                    <div class="stop">
+                      <div>
+                        21 octobre 2022,<br />
+                        21h : 55
+                      </div>
+                      <div>Geneva(GVA)</div>
+                    </div>
+                    <div class="duration">
+                      <div>
+                        Durée du vol : 01h 10m
+                      </div>
+                      <div>
+                        01 arrêt de 10h 20m
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="group">
-                <div class="field">
-                  <label>Votre genre</label>
-                  <div class="input prefix select">
-                    <select>
-                      <option>Mr</option>
-                      <option>Mme</option>
-                      <option>Mlle</option>
-                    </select>
-                    <input type="text" />
-                  </div>
+              <div class="type return">
+                <div class="header">
+                  <h2>Vol retour - Douala Paris (16h 20m)</h2>
+                  <div>Samedi 29 octobre 2022</div>
                 </div>
-                <div class="line">
-                  <div class="field">
-                    <label>Votre prénom</label>
-                    <div class="input">
-                      <input type="text" />
+    
+                <div class="items">
+                  <div class="data">
+                    <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
+                    <div class="departure">
+                      <div>
+                        21 octobre 2022,<br />
+                        20h : 45
+                      </div>
+                      <div>Paris (CDG)</div>
+                    </div>
+                    <div class="stop">
+                      <div>
+                        21 octobre 2022,<br />
+                        21h : 55
+                      </div>
+                      <div>Geneva(GVA)</div>
+                    </div>
+                    <div class="duration">
+                      <div>
+                        Durée du vol : 01h 10m
+                      </div>
+                      <div>
+                        01 arrêt de 10h 20m
+                      </div>
                     </div>
                   </div>
-                  <div class="field">
-                    <label>Votre nom de famille</label>
-                    <div class="input">
-                      <input type="text" />
+                  <div class="note">
+                    Ce Vol a une escale technique à NSI 1 heure 15 minutes
+                  </div>
+                  <div class="data">
+                    <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
+                    <div class="departure">
+                      <div>
+                        21 octobre 2022,<br />
+                        20h : 45
+                      </div>
+                      <div>Paris (CDG)</div>
+                    </div>
+                    <div class="stop">
+                      <div>
+                        21 octobre 2022,<br />
+                        21h : 55
+                      </div>
+                      <div>Geneva(GVA)</div>
+                    </div>
+                    <div class="duration">
+                      <div>
+                        Durée du vol : 01h 10m
+                      </div>
+                      <div>
+                        01 arrêt de 10h 20m
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset>
-              <h2>Détails du contact</h2>
-              <div class="field">
-                <label>Numéro de téléphone</label>
-                <div class="input prefix select">
-                  <select>
-                    <option>CMR</option>
-                  </select>
-                  <input type="text" placeholder="+237 699 66 44 55" />
-                </div>
-              </div>
-              <div class="field">
-                <label>Adresse e-mail</label>
-                <div class="input prefix">
-                  <i class="fa-solid fa-envelope"></i>
-                  <input type="text" placeholder="jeanjules@warfira.com" />
-                </div>
-              </div>
-            </fieldset>
-          </form>
-
-          <div class="fees-details">
-            <div>
-              <div class="price">
-                <div>Tarifs de base</div>
-                <div class="more">
-                  <div class="adult">
-                    <div class="count">3 adultes</div>
-                    <div class="amount">1841 €</div>
-                  </div>
-                  <div class="child">
-                    <div class="count">01 enfant</div>
-                    <div class="amount">276 €</div>
-                  </div>
-                </div>
-              </div>
-              <div class="">
-                <div>Détails</div>
-                <div class="more">
-                  <div class="tax">
-                    <div>Taxe</div>
-                    <div>1841 €</div>
-                  </div>
-                  <div class="fees">
-                    <div>Frais de commodité</div>
-                    <div>276 €</div>
+                  <div class="data">
+                    <div><img src="images/airfrance.svg" alt="ethiopian airlines" /></div>
+                    <div class="departure">
+                      <div>
+                        21 octobre 2022,<br />
+                        20h : 45
+                      </div>
+                      <div>Paris (CDG)</div>
+                    </div>
+                    <div class="stop">
+                      <div>
+                        21 octobre 2022,<br />
+                        21h : 55
+                      </div>
+                      <div>Geneva(GVA)</div>
+                    </div>
+                    <div class="duration">
+                      <div>
+                        Durée du vol : 01h 10m
+                      </div>
+                      <div>
+                        01 arrêt de 10h 20m
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <hr />
-            <div>
-              <span>Montant Total</span>
-              <span>3034 €</span>
-            </div>
-          </div>
-        </div>
-        <div class="nav">
-          <button class="">Suivant</button>
-          <button class="white">Annulez</button>
-        </div>
-      </div>
-      <div class="step-payment">
-        <div class="header">
-          <h1>Informations des passagers</h1>
-        </div>
-        <div class="content">
-          <form>
-            <fieldset>
-              <div class="field">
-                <label>Choisissez avez quoi vous souhaitez payer</label>
-                <div class="checkbox border">
-                  <input type="checkbox" />
-                  <img src="images/orange-money.svg" alt="orange-money" />
-                  <img src="images/mtn.svg" alt="mtn" />
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="border colored">
-              <div class="field">
-                <div class="checkbox">
-                  <input type="checkbox" />
-                  <img src="images/mastercard.svg" alt="mastercard" />
-                  <img src="images/visa.svg" alt="visa" />
-                  <img src="images/paypal.svg" alt="paypal" />
-                </div>
-              </div>
-              <div class="field">
-                <div class="input">
-                  <input type="text" placeholder="Numéro de carte bancaire" />
-                </div>
-              </div>
-              <div class="line">
-                <div class="field">
-                  <div class="input">
-                    <input type="text" placeholder="MM / AA"/>
-                  </div>
-                </div>
-                <div class="field">
-                  <div class="input">
-                    <input type="text" placeholder="Cryptogramme"/>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div class="field text">
-              <div class="checkbox">
-                <input type="checkbox" name="general-condition" />
-                <label>Conditions générales d'utilisation</label>
-              </div>
+            <div class="fees-details">
               <div>
-                La plupart des pays exigent que les voyageurs aient un passeport valide de 3 à 6 mois à partir de la date d'entrée ou de sortie du pays. Veuillez vérifier les règles exactes de votre pays de destination avant de terminer la réservation.
+                <div class="price">
+                  <div>Tarifs de base</div>
+                  <div class="more">
+                    <div class="adult">
+                      <div class="count">3 adultes</div>
+                      <div class="amount">1841 €</div>
+                    </div>
+                    <div class="child">
+                      <div class="count">01 enfant</div>
+                      <div class="amount">276 €</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div>Détails</div>
+                  <div class="more">
+                    <div class="tax">
+                      <div>Taxe</div>
+                      <div>1841 €</div>
+                    </div>
+                    <div class="fees">
+                      <div>Frais de commodité</div>
+                      <div>276 €</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div>
+                <span>Montant Total</span>
+                <span>3034 €</span>
               </div>
             </div>
-          </form>
+          </div>
+          <div class="insurance">
+            <div class="header">
+              <h2>Assurez votre voyage</h2>
+              <div>40% DE NOS CLIENTS ASSURENT LEUR VOYAGE. VOIR TOUS LES AVANTAGES QUE VOUS OBTENEZ POUR SEULEMENT RS.</div>
+            </div>
+            <div class="choices">
+              <div class="input">
+                <input type="radio" name="insurance" id="insurance-yes" value="yes" />
+                <label for="insurance-yes">Oui, sécuriser mon voyage avec une assurance. je suis d'accord avec le Conditions générales</label>
+              </div>
+              <div class="input">
+                <input type="radio" name="insurance" id="insurance-no" value="no" />
+                <label for="insurance-no">Non, je ne veux pas assurer mon voyage</label>
+              </div>
+            </div>
+          </div>
+          <div class="nav">
+            <button class="">Suivant</button>
+            <button class="white">Annulez</button>
+          </div>
         </div>
-        <div class="nav">
-          <button class="">Validez et Payez</button>
-          <button class="white">Annulez</button>
+        <div class="step-tab-panel step-passengers" data-step="passengers">
+          <div class="header">
+            <h1>Informations des passagers</h1>
+          </div>
+          <div class="content">
+            <form>
+              <fieldset>
+                <h2>S'il vous plaît entrer les noms des clients</h2>
+                <div class="field">
+                  <label>Vous avez un e-coupon ou un code d'accord ? (Facultatif)</label>
+                  <div class="input suffix button">
+                    <input type="text" class="w-half"/>
+                    <button>Validez votre code</button>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <h2>S'il vous plaît entrer les noms des clients</h2>
+                <div class="group">
+                  <div class="field">
+                    <label>Votre genre</label>
+                    <div class="input prefix select">
+                      <select>
+                        <option>Mr</option>
+                        <option>Mme</option>
+                        <option>Mlle</option>
+                      </select>
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="field">
+                      <label>Votre prénom</label>
+                      <div class="input">
+                        <input type="text" />
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label>Votre nom de famille</label>
+                      <div class="input">
+                        <input type="text" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="group">
+                  <div class="field">
+                    <label>Votre genre</label>
+                    <div class="input prefix select">
+                      <select>
+                        <option>Mr</option>
+                        <option>Mme</option>
+                        <option>Mlle</option>
+                      </select>
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="field">
+                      <label>Votre prénom</label>
+                      <div class="input">
+                        <input type="text" />
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label>Votre nom de famille</label>
+                      <div class="input">
+                        <input type="text" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <h2>Détails du contact</h2>
+                <div class="field">
+                  <label>Numéro de téléphone</label>
+                  <div class="input prefix select">
+                    <select>
+                      <option>CMR</option>
+                    </select>
+                    <input type="text" placeholder="+237 699 66 44 55" />
+                  </div>
+                </div>
+                <div class="field">
+                  <label>Adresse e-mail</label>
+                  <div class="input prefix">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" placeholder="jeanjules@warfira.com" />
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+  
+            <div class="fees-details">
+              <div>
+                <div class="price">
+                  <div>Tarifs de base</div>
+                  <div class="more">
+                    <div class="adult">
+                      <div class="count">3 adultes</div>
+                      <div class="amount">1841 €</div>
+                    </div>
+                    <div class="child">
+                      <div class="count">01 enfant</div>
+                      <div class="amount">276 €</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div>Détails</div>
+                  <div class="more">
+                    <div class="tax">
+                      <div>Taxe</div>
+                      <div>1841 €</div>
+                    </div>
+                    <div class="fees">
+                      <div>Frais de commodité</div>
+                      <div>276 €</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div>
+                <span>Montant Total</span>
+                <span>3034 €</span>
+              </div>
+            </div>
+          </div>
+          <div class="nav">
+            <button class="">Suivant</button>
+            <button class="white">Annulez</button>
+          </div>
+        </div>
+        <div class="step-tab-panel step-payment" data-step="payment">
+          <div class="header">
+            <h1>Informations des passagers</h1>
+          </div>
+          <div class="content">
+            <form>
+              <fieldset>
+                <div class="field">
+                  <label>Choisissez avez quoi vous souhaitez payer</label>
+                  <div class="checkbox border">
+                    <input type="checkbox" />
+                    <img src="images/orange-money.svg" alt="orange-money" />
+                    <img src="images/mtn.svg" alt="mtn" />
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="border colored">
+                <div class="field">
+                  <div class="checkbox">
+                    <input type="checkbox" />
+                    <img src="images/mastercard.svg" alt="mastercard" />
+                    <img src="images/visa.svg" alt="visa" />
+                    <img src="images/paypal.svg" alt="paypal" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="input">
+                    <input type="text" placeholder="Numéro de carte bancaire" />
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="field">
+                    <div class="input">
+                      <input type="text" placeholder="MM / AA"/>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="input">
+                      <input type="text" placeholder="Cryptogramme"/>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="field text">
+                <div class="checkbox">
+                  <input type="checkbox" name="general-condition" />
+                  <label>Conditions générales d'utilisation</label>
+                </div>
+                <div>
+                  La plupart des pays exigent que les voyageurs aient un passeport valide de 3 à 6 mois à partir de la date d'entrée ou de sortie du pays. Veuillez vérifier les règles exactes de votre pays de destination avant de terminer la réservation.
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="nav">
+            <button class="">Validez et Payez</button>
+            <button class="white">Annulez</button>
+          </div>
         </div>
       </div>
     </section>
@@ -603,5 +608,10 @@
         </div>
       </div>
     </footer>
+    <script>
+      $('#booking-flight').steps({
+        onFinish: function () { alert('complete'); }
+      });
+    </script>
   </body>
 </html>

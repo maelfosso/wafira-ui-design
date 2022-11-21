@@ -3219,6 +3219,18 @@ section#booking-flight .step-payment form > .field.text {
   color: #52525B;
 }
 
+.step-app>.step-content {
+  border: none;
+  padding: 0;
+}
+
+.step-app>.step-content>.step-tab-panel {
+  display: none !important;
+}
+.step-app>.step-content>.step-tab-panel.active {
+  display: flex !important;
+}
+
 @media only screen and (max-width: 768px) {
   section#booking-flight {
 
