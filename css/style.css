@@ -1,11 +1,23 @@
 html, body {
   min-height: 100vh;
 }
-* { 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* body {
+  margin: 0;
+  overflow-x: hidden;
+} */
 
 body{
   margin: 0px;
@@ -22,6 +34,127 @@ dl, ol, ul {
 
 ol, ul {
   padding-left: 0;
+}
+
+label {
+  display: inline-block;
+  margin: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0%;
+}
+
+input::-webkit-datetime-edit-fields-wrapper {
+  position: relative;
+  left: 00%;
+}
+
+input::-webkit-datetime-edit {
+  position: relative;
+  left: 0%;
+}
+
+/* Share */
+
+.w-half {
+  width: 50% !important;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.line > * {
+  flex-grow: 1;
+}
+
+button {
+  align-self: flex-end;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: #29378c;
+  color :white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 46px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+button.circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+
+  width: 45px;
+  height: 45px;
+
+  background: #2563EB;
+  border-radius: 60px;
+}
+
+button.circle i {
+  color: #FFFFFF;
+}
+
+button.icon {
+  border: none;
+  background: none;
+}
+
+button.light {
+  color: #1E40AF;
+  background: #FFFFFF;
+  font-weight: 700;
+}
+
+button.white {
+  background: #FFFFFF;
+
+  border: 1px solid #1E40AF;
+  border-radius: 46px;
+
+  color: #1E40AF;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.no-pad-bottom {
+  padding-bottom: 0 !important;
 }
 
 /* Header */
@@ -123,7 +256,7 @@ header nav #others #sign button {
   header nav label {
     display: block;
   }
-  
+
   header nav #menu {
     display: none;
   }
@@ -186,20 +319,28 @@ header nav #others #sign button {
 
 }
 
-header #hero {
+section#hero {
   height: calc(100vh - 80px);
   position: relative;
 }
 
-header #hero video {
+section#hero video,
+section#hero .video {
   object-fit: cover;
-  width: 100%;
+  width: 120%;
   height: 100%;
   position: absolute;
   z-index: 1;
+  /* position: fixed; z-index: -99; width: 100%; height: 100%; */
 }
 
-header #hero .overlay {
+section#hero .video iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section#hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -209,8 +350,8 @@ header #hero .overlay {
   background: rgba(0,0,0,0.6);
 }
 
-header #hero .content {
-  width: 60%;
+section#hero > .content {
+  width: 72%;
   margin: auto;
   height: 100%;
   display: flex;
@@ -219,16 +360,17 @@ header #hero .content {
   align-items: flex-start;
   position: relative;
   z-index: 3;
+  max-width: 900px;
 }
 
-header #hero .content h1 {
+section#hero .content h1 {
   font-weight: 400;
   font-size: 56px;
   line-height: 100%;
   color: #FFFFFF;
 }
 
-header #hero .content .search {
+section#hero .content .search {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,7 +379,7 @@ header #hero .content .search {
   margin-bottom: 20px;
 }
 
-header #hero .content .search .top {
+section#hero .content .search .top {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -246,7 +388,7 @@ header #hero .content .search .top {
   border-radius: 0px;
 }
 
-header #hero .content .search .top li {
+section#hero .content .search .top li {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -255,36 +397,38 @@ header #hero .content .search .top li {
   gap: 10px;
 
   background: #FFFFFF;
-  
+
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
 }
 
-header #hero .content .search .top li a {
+section#hero .content .search .top li a {
   color: inherit;
   text-decoration: none;
 }
 
-header #hero .content .search .top > li:first-child {
+/* section#hero .content .search .top > li:first-child {
   border-radius: 20px 0px 0px 0px;
-}
+    background: #1E40AF;
+    color: white;
+} */
 
-header #hero .content .search .top > li:last-child {
+section#hero .content .search .top > li:last-child {
   border-radius: 0px 20px 0px 0px;
 }
 
-header #hero .content .search .top .active {
+section#hero .content .search .top .active {
   background: #1E40AF;
   color: #FFFFFF;
 }
 
-header #hero .content .search .top .ui-tabs-active.ui-state-active {
+section#hero .content .search .top .ui-tabs-active.ui-state-active {
   background: #1E40AF;
   color: #FFFFFF;
 }
 
-header #hero .content .search .inputs {
+section#hero .content .search .inputs {
   display: flex;
   flex-direction: column;
   padding: 20px 20px;
@@ -296,10 +440,10 @@ header #hero .content .search .inputs {
   border-radius: 0px 20px 20px 20px;
 }
 
-header #hero .content .search .inputs .fields {
+section#hero .content .search .inputs .fields {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  /* align-items: baseline; */
   padding: 0px;
   gap: 15px;
 
@@ -313,56 +457,85 @@ header #hero .content .search .inputs .fields {
   color: #27272A;
 }
 
-header #hero .content .search .inputs .fields .content {
+section#hero .content .search .inputs .fields.line > div {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 32px;
-  flex-wrap: wrap;
-  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+section#hero .content .search .inputs .fields select {
+  border: none;
+  outline: none;
 }
 
-header #hero .content .search .inputs .fields .content > div {
+section#hero .content .search .inputs .fields .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  align-self: center;
+  padding: 0px;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 100%;
+}
+
+section#hero .content .search .inputs .fields .content > div {
+  position: relative;
+}
+
+section#hero .content .search .inputs .fields .content > div.line {
+  display: flex;
+  /* flex-direction: column; */
+  flex-direction: row;
+  justify-content: space-between;
   padding: 0px;
   gap: 8px;
 }
 
-header #hero .content .search .inputs .fields .content input {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #A1A1AA;
+section#hero .content .search .inputs .fields .content input {
+  width: 150px;
+  padding: 5px 0;
   border: none;
   outline: none;
+  color: #a1a1aa;
+  font-family: "Helvetica 45 Light",sans-serif;
+  flex-direction: row-reverse;
+  position: relative;
 }
 
-header #hero .content .search .inputs .fields .content select {
+section#hero .content .search .inputs .fields .content select {
   border: none;
   outline: none;
   color: #71717A;
 }
 
-header #hero .content .search .inputs .fields .content span {
+section#hero .content .search .inputs .fields .content span {
   color: #71717A;
 }
 
-header #hero .content .search .inputs .fields .content i {
+section#hero .content .search .inputs .fields .content i {
   color: #A1A1AA;
 }
 
-header #hero .content .search .inputs .fields .buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
+section#hero .content .search .inputs .fields .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 8px;
+    background: #1E40AF;
+    border-radius: 46px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
 }
 
-header #hero .content .search .inputs .fields .buttons button {
+section#hero .content .search .inputs .fields .buttons button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -380,31 +553,31 @@ header #hero .content .search .inputs .fields .buttons button {
   color: #FFFFFF;
 }
 
-header #hero .content .search .inputs .fields .buttons button.more-filters {
+section#hero .content .search .inputs .fields .buttons button.more-filters {
   background: #FFFFFF;
   border: 1px solid #1E40AF;
   color: #1E40AF;
 }
 
-header #hero .content .search .inputs .fields-2 button i {
+section#hero .content .search .inputs .fields-2 button i {
   color: #FFFFFF;
-} 
+}
 
-header #hero .content .search .inputs .fields-1 select {
+section#hero .content .search .inputs .fields-1 select {
   border: none;
   outline: none;
   color: #71717A;
 }
 
-header #hero .content .search .inputs .fields-1 span {
+section#hero .content .search .inputs .fields-1 span {
   color: #71717A;
 }
 
-header #hero .content .search .inputs .fields-1 i {
+section#hero .content .search .inputs .fields-1 i {
   color: #A1A1AA;
 }
 
-header #hero .content .search .inputs .fields-2 {
+section#hero .content .search .inputs .fields-2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -412,7 +585,7 @@ header #hero .content .search .inputs .fields-2 {
   padding: 0px;
 }
 
-header #hero .content .search .inputs .fields-2 > div:first-child {
+section#hero .content .search .inputs .fields-2 > div:first-child {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -421,8 +594,8 @@ header #hero .content .search .inputs .fields-2 > div:first-child {
   gap: 32px;
 }
 
-header #hero .content .search .inputs .fields-2 .location,
-header #hero .content .search .inputs .fields-2 .calendar {
+section#hero .content .search .inputs .fields-2 .location,
+section#hero .content .search .inputs .fields-2 .calendar {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -431,16 +604,16 @@ header #hero .content .search .inputs .fields-2 .calendar {
   color: #27272A;
 }
 
-header #hero .content .search .inputs .fields-2 .location > div,
-header #hero .content .search .inputs .fields-2 .calendar > div {
+section#hero .content .search .inputs .fields-2 .location > div,
+section#hero .content .search .inputs .fields-2 .calendar > div {
   display: flex;
   flex-direction: row;
   padding: 0px;
   gap: 12px;
 }
 
-header #hero .content .search .inputs .fields-2 .location input,
-header #hero .content .search .inputs .fields-2 .calendar input {
+section#hero .content .search .inputs .fields-2 .location input,
+section#hero .content .search .inputs .fields-2 .calendar input {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -449,7 +622,7 @@ header #hero .content .search .inputs .fields-2 .calendar input {
   outline: none;
 }
 
-header #hero .content .search .inputs .fields-2 button {
+section#hero .content .search .inputs .fields-2 button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -467,40 +640,7 @@ header #hero .content .search .inputs .fields-2 button {
   color: #FFFFFF;
 }
 
-header #hero .content .search .inputs .fields-2 button i {
-  color: #FFFFFF;
-}
-
-.w-half {
-  width: 50% !important;
-}
-
-.group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.line {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-}
-
-.line > * {
-  flex-grow: 1;
-}
-
-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 16px;
-  gap: 8px;
-  background: #1E40AF;
-  border-radius: 12px;
-  border: none;
+section#hero .content .search .inputs .fields-2 button i {
   color: #FFFFFF;
 }
 
@@ -509,24 +649,14 @@ button.icon {
   background: none;
 }
 
-button.light {
-  color: #1E40AF;
-  background: #FFFFFF;
-  font-weight: 700;
-}
-
-button.white {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: #52525B;
-  background: white;
-  border: 1px solid #A1A1AA;
-  border-radius: 12px;
-}
-
 a {
-  text-decoration: none;
+    font-family: "Helvetica",sans-serif;
+    color: #000;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -543,51 +673,76 @@ li {
     padding: 12px 20px;
   }
 
-  header #hero {
-    padding: 40px 20px;
-
+  section#hero {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
 
-  header #hero .content {
+  section#hero .content {
     width: 100%;
+    padding: 40px 20px;
   }
 
-  header #hero .content .search .inputs {
+  section#hero .content .search .inputs {
     width: 100%;
     border-radius: 0px 0px 20px 20px;
   }
 
-  header #hero .content .search .inputs .fields {
+  section#hero .content .search .inputs .fields {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
 
-  header #hero .content .search .inputs .fields .buttons {
+  section#hero .content .search .inputs .fields > div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  section#hero .content .search .inputs .fields > div > button {
+    flex-grow: 1;
+  }
+
+  section#hero .content .search .inputs .fields .buttons {
     width: 100%;
   }
 
-  header #hero .content .search .inputs .fields .buttons button {
+  section#hero .content .search .inputs .fields .buttons button {
     width: 100%;
   }
+
+  section#hero .content .search .inputs .fields .content {
+    gap: 16px;
+  }
+
+  section#hero .content .search .inputs .fields .content > div {
+    width: 100%;
+  }
+
+  section#hero .content .search .inputs .fields .content > div > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
 }
 
 /* Login & Registration */
 #auth {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  /* flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0px;
   gap: 8px;
 
-  background: transparent;
-  width: 50%;
-  margin: 0 auto;
+  background: transparent; */
+  /* width: 50%;
+  margin: 0 auto; */
 }
 
 #auth .close-auth {
@@ -607,6 +762,14 @@ li {
   opacity: 1;
 
   cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#auth .content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 #auth .content header,
@@ -746,6 +909,7 @@ li {
   position: absolute;
   left: 16px;
   color: #A1A1AA;
+  width: auto;
 }
 
 #login form fieldset .email .input input,
@@ -768,8 +932,10 @@ li {
   width: 100%;
 }
 
-#login form fieldset .password .input button.see-password {
+#login form fieldset .password .input button.see-password,
+#login form fieldset .password .input i.see-password {
   right: 16px;
+  left: auto;
   position: absolute;
   color: #1E40AF;;
   width: auto;
@@ -1218,7 +1384,6 @@ section#loved-hotels {
   display: flex;
   flex-direction: column;
   padding: 80px;
-  margin-bottom: 100px;
 }
 
 section#loved-hotels header {
@@ -1558,7 +1723,7 @@ section#newsletter .subscribe button {
   section#newsletter {
     padding: 40px 20px;
   }
-  
+
   section#newsletter .content {
     width: 100%;
     text-align: inherit;
@@ -1683,7 +1848,6 @@ footer .mentions .social-media {
 
 }
 
-/* Flights */
 section#flights #search,
 section#flights #items {
     padding: 20px 80px;
@@ -1838,7 +2002,7 @@ section#flights #items .data .book-it-now button {
     color: #2563EB;
 }
 
-section#flights #items .data.with-stops {
+section#flights #items .data.roundtrip {
   background: #EFF6FF;
 }
 
@@ -1850,7 +2014,7 @@ section#flights #items .data .content .details.first {
   border-radius: 12px;
 }
 
-section#flights #items .data.with-stops .book-it-now button {
+section#flights #items .data.roundtrip .book-it-now button {
   color: #FFFFFF;
   border: none;
   background: #1E40AF;
@@ -1910,9 +2074,14 @@ section#flights #search .inputs {
 section#flights #search .inputs .fields {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
-  padding: 0px 0px 0px 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
   gap: 32px;
+}
+
+section#flights #search .inputs .fields:first-of-type {
+  justify-content: flex-start;
 }
 
 section#flights #search .inputs hr {
@@ -1930,7 +2099,7 @@ section#flights #search .inputs .fields input {
 section#flights #search .inputs .fields.oneline > div {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: center;
   padding: 0px;
   gap: 8px;
 }
@@ -1945,8 +2114,9 @@ section#flights #search .inputs .buttons {
   flex-direction: row;
   justify-content: flex-end;
   gap: 8px;
-  position: absolute;
-  right: 5;
+  flex: 1;
+  /* position: absolute;
+  right: 5; */
 }
 
 section#flights #search .inputs .fields > div {
@@ -1957,7 +2127,7 @@ section#flights #search .inputs .fields > div {
   gap: 8px;
 }
 
-section#flights #search .inputs .fields > div div:first-child {
+section#flights #search .inputs .fields > div > div:first-child {
   display: flex;
   flex-direction: row;
   /* align-items: center; */
@@ -1968,8 +2138,8 @@ section#flights #search .inputs .fields > div div:first-child {
   color: #27272A;
 }
 
-section#flights #search .inputs .fields .location div:last-child,
-section#flights #search .inputs .fields .calendar div:last-child {
+section#flights #search .inputs .fields .location > div:last-child,
+section#flights #search .inputs .fields .calendar > div:last-child {
   display: flex;
   flex-direction: row;
   /* align-items: center; */
@@ -1981,6 +2151,13 @@ section#flights #search .inputs .fields .input {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  position: relative;
+}
+
+section#flights #search .inputs .fields .input .autocomplete-items {
+  position: absolute;
+  top: 25px;
+  left: 27px;
 }
 
 section#flights #search .inputs .fields .location i.fa-solid {
@@ -1992,7 +2169,7 @@ section#flights #search .inputs .buttons button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   padding: 12px;
   gap: 8px;
 
@@ -2036,6 +2213,24 @@ section#flights #results .content {
   width: 100%;
 }
 
+section#flights #results .content .title {
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1; */
+}
+
+section#flights #results .content .flags,
+section#flights #results .content .flags .items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 75%;
+  overflow-x: auto;
+}
+
 section#flights #results .content .title .from-to {
   color: #27272A;
   font-size: 18px;
@@ -2045,14 +2240,26 @@ section#flights #results .content .title .from-to {
 section#flights #results .content .title .found {
   color: #2563EB;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 15px;
 }
 
 section#flights #results .content .flags .item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 8pxpx;
+  justify-content: center;
+  padding: 6px 8px;
+  gap: 4px;
+
+  border: 1px solid #DBEAFE;
+  border-radius: 12px;
+}
+
+section#flights #results .content .flags .item div:last-of-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #71717A;
+  width: max-content;
 }
 
 
@@ -2065,11 +2272,21 @@ section#flights #results .content .flags .item {
     flex-direction: column;
     padding: 0;
     gap: 12px;
+    width: 100%;
   }
 
   section#flights #search .inputs .fields > div {
     justify-content: space-between;
     padding: 0px 0px 4px;
+    width: 100%;
+  }
+
+  section#flights #search .inputs .fields .input {
+    width: 50%;
+  }
+
+  section#flights #search .inputs .fields .calendar > div:last-child {
+    justify-content: space-between;
   }
 
   section#flights #search .inputs .fields .buttons,
@@ -2077,6 +2294,7 @@ section#flights #results .content .flags .item {
     position: relative;
     right: 0;
     flex-direction: column;
+    width: 100%;
   }
 
   section#flights #results {
@@ -2087,11 +2305,15 @@ section#flights #results .content .flags .item {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  section#flights #results .content .flags {
+    width: 100%;
+  }
 }
 
 /* Filters Flights Search */
 section#flights-search-filters {
-  background-color: #27272A;
+  /* background-color: #27272A; */
 
   display: flex;
   flex-direction: column;
@@ -2155,7 +2377,7 @@ section#flights-search-filters .content .filters {
   /* align-items: flex-start; */
   padding: 20px;
   gap: 32px;
-  
+
   background: #FFFFFF;
   border-radius: 20px;
 }
@@ -2266,8 +2488,6 @@ section#flights-search-filters .content .filters form .buttons {
   }
 }
 
-/* BOOKING FLIGHT  */
-
 #booking-flight {
   padding: 40px 80px;
 
@@ -2350,6 +2570,10 @@ section#booking-flight header .step .desc .subtitle {
   color: #71717A;
 }
 
+section#booking-flight header .step .desc .subtitle.small {
+  display: none;
+}
+
 section#booking-flight header .step.active {
   border-bottom: 4px solid #2563EB;
 }
@@ -2394,8 +2618,13 @@ section#booking-flight #flight .data {
   gap: 20px;
 
   /* background: #FAFAFA; */
-  /* border-bottom: 1px solid #F4F4F5;
-  border-radius: 16px; */
+  padding: 12px 8px 15px;
+  border-bottom: 1px solid #BFDBFE;
+  border-radius: 16px;
+}
+
+section#booking-flight #flight .data:last-of-type {
+  border: none;
 }
 
 section#booking-flight #flight .infos {
@@ -2649,7 +2878,7 @@ section#booking-flight .details .flight-details .items .data {
   align-items: center;
   padding: 0px 12px 12px 0px;
   gap: 20px;
-  
+
   border-bottom: 1px solid #BFDBFE;
   /* border-radius: 12px; */
 }
@@ -2802,7 +3031,7 @@ section#booking-flight .details .fees-details hr {
 section#booking-flight .details .fees-details > div:first-child .details > div:first-child {
   font-weight: 400;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 80%;
 
   color: #27272A;
 }
@@ -2812,7 +3041,7 @@ section#booking-flight .details .fees-details > div:last-child {
   flex-direction: row;
   justify-content: space-between;
   padding: 0px;
-  gap: 140px;
+  gap: 80px;
 }
 
 section#booking-flight .details .fees-details > div:last-child > span {
@@ -2862,6 +3091,13 @@ section#booking-flight .insurance .choices {
   /* align-items: flex-start; */
   padding: 0px;
   gap: 4px;
+}
+
+section#booking-flight .insurance .choices .input {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: baseline;
 }
 
 section#booking-flight .insurance .choices .input label {
@@ -3010,7 +3246,8 @@ section#booking-flight .step-passengers form fieldset > div .input.prefix i {
   color: #A1A1AA;
 }
 
-section#booking-flight .step-passengers .content .fees-details {
+section#booking-flight .step-passengers .content .fees-details,
+section#booking-flight .step-payment .content .fees-details {
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
@@ -3024,7 +3261,8 @@ section#booking-flight .step-passengers .content .fees-details {
   height: min-content;
 }
 
-section#booking-flight .step-passengers .content .fees-details > div {
+section#booking-flight .step-passengers .content .fees-details > div,
+section#booking-flight .step-payment .content .fees-details > div {
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
@@ -3032,13 +3270,15 @@ section#booking-flight .step-passengers .content .fees-details > div {
   gap: 32px;
 }
 
-section#booking-flight .step-passengers .content .fees-details > div > div {
+section#booking-flight .step-passengers .content .fees-details > div > div,
+section#booking-flight .step-payment .content .fees-details > div > div {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-section#booking-flight .step-passengers .content .fees-details > div > div .more > div {
+section#booking-flight .step-passengers .content .fees-details > div > div .more > div,
+section#booking-flight .step-payment .content .fees-details > div > div .more > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -3049,14 +3289,16 @@ section#booking-flight .step-passengers .content .fees-details > div > div .more
   color: #52525B;
 }
 
-section#booking-flight .step-passengers .content .fees-details > div:first-child .price .more .amount {
+section#booking-flight .step-passengers .content .fees-details > div:first-child .price .more .amount,
+section#booking-flight .step-payment .content .fees-details > div:first-child .price .more .amount {
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
   color: #27272A;
 }
 
-section#booking-flight .step-passengers .content .fees-details > div:first-child .price > div:first-child {
+section#booking-flight .step-passengers .content .fees-details > div:first-child .price > div:first-child,
+section#booking-flight .step-payment .content .fees-details > div:first-child .price > div:first-child {
   font-weight: 700;
   font-size: 18px;
   line-height: 120%;
@@ -3064,13 +3306,15 @@ section#booking-flight .step-passengers .content .fees-details > div:first-child
   color: #1E3A8A;
 }
 
-section#booking-flight .step-passengers .content hr {
+section#booking-flight .step-passengers .content hr,
+section#booking-flight .step-payment .content hr {
   background: #E4E4E7;
   height: 1;
   margin: 5px 0;
 }
 
-section#booking-flight .step-passengers .content > div:first-child .details > div:first-child {
+section#booking-flight .step-passengers .content > div:first-child .details > div:first-child,
+section#booking-flight .step-payment .content > div:first-child .details > div:first-child {
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
@@ -3085,7 +3329,8 @@ section#booking-flight .step-passengers .content > div:first-child .details > di
   padding: 0px;
   gap: 140px;
 } */
-section#booking-flight .step-passengers .content .fees-details > div:last-child {
+section#booking-flight .step-passengers .content .fees-details > div:last-child,
+section#booking-flight .step-payment .content .fees-details > div:last-child {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -3094,7 +3339,8 @@ section#booking-flight .step-passengers .content .fees-details > div:last-child 
   gap: 140px;
 }
 
-section#booking-flight .step-passengers .content .fees-details > div:last-child > span {
+section#booking-flight .step-passengers .content .fees-details > div:last-child > span,
+section#booking-flight .step-payment .content .fees-details > div:last-child > span {
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
@@ -3219,20 +3465,488 @@ section#booking-flight .step-payment form > .field.text {
   color: #52525B;
 }
 
-.step-app>.step-content {
+.step-app > .step-content {
   border: none;
   padding: 0;
 }
 
-.step-app>.step-content>.step-tab-panel {
+.step-app > .step-content > .step-tab-panel {
   display: none !important;
 }
-.step-app>.step-content>.step-tab-panel.active {
+
+.step-app > .step-content > .step-tab-panel.active {
   display: flex !important;
 }
 
 @media only screen and (max-width: 768px) {
   section#booking-flight {
+    padding: 30px 20px;
+  }
 
+  section#booking-flight #flight {
+    flex-direction: column;
+  }
+
+  section#booking-flight #flight .data .content .details {
+    flex-direction: column;
+  }
+
+  section#booking-flight #flight .data:last-of-type {
+    border-bottom: 1px solid #BFDBFE;
+  }
+
+  section#booking-flight #flight .data .content .details > div {
+    align-self: flex-start;
+  }
+
+  section#booking-flight #flight .infos {
+    padding: 12px 8px;
+    align-items: flex-start;
+  }
+
+  section#booking-flight .details {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  section#booking-flight .details .flight-details .items .data {
+    /* flex-direction: column; */
+    /* align-items: start; */
+    flex-wrap: wrap;
+  }
+
+  section#booking-flight .details .flight-details .items .data > div:first-of-type {
+    width: 100%;
+  }
+
+  section#booking-flight .nav > button {
+    flex-grow: 1;
+  }
+
+  section#booking-flight .step-passengers .content,
+  section#booking-flight .step-payment .content {
+    flex-direction: column-reverse;
+  }
+
+  section#booking-flight header {
+    display: flex;
+    border: none;
+    border-radius: 0;
+  }
+
+  section#booking-flight header .step .id {
+    display: none;
+  }
+
+  section#booking-flight header .step {
+    display: none;
+    padding-left: 0;
+  }
+
+  section#booking-flight header .step:first-of-type {
+    padding-left: 0;
+  }
+
+  section#booking-flight header .step.active {
+    display: flex;
+    border: none;
+  }
+
+  section#booking-flight header .step.active > div:first-child {
+    display: none;
+  }
+
+  section#booking-flight header .step .desc .title {
+    color: #2563EB;
+    text-transform: none;
+  }
+
+  section#booking-flight header .step .desc .subtitle.large {
+    display: none;
+  }
+
+  section#booking-flight header .step .desc .subtitle.small {
+    display: block;
+  }
+}
+
+/* 
+HOTELS 
+https://www.figma.com/file/PFym9VLA8xBX5gHSzHxs84/Warfira?node-id=63%3A1915&t=pPXmVVNCtWU2CJvJ-4
+*/
+
+#hotels {
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+#hotels #search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 4px;
+
+  background: #FAFAFA;
+  /* gray/200 */
+
+  border: 1px solid #E4E4E7;
+  border-radius: 20px;
+}
+
+#hotels #search form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  gap: 4px;
+}
+
+#hotels #search form fieldset {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+#hotels #search form fieldset > .fields,
+#hotels #search form fieldset > .field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#hotels #search form fieldset > .fields .field {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+
+#hotels #search form .actions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+#hotels #search form .label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #27272A;
+
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+#hotels #search form fieldset hr {
+  display: none;
+  margin: 12px 0;
+  height: 1px;
+  background-color: #E4E4E7;
+  opacity: 0.5;
+}
+
+#hotels #search form fieldset > .fields .field {
+  flex-grow: 1;
+}
+
+#hotels #search form fieldset,
+#hotels #search form input,
+#hotels #search form select {
+  border: none;
+  outline: none;
+  background-color: #FAFAFA;
+}
+
+#hotels #list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
+}
+
+#hotels #list .hotel {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 38px 12px 12px;
+  gap: 10px;
+
+  background: #FFFFFF;
+  border: 1px solid #F4F4F5;
+  border-radius: 16px;
+}
+
+#hotels #list .hotel:hover {
+  background: #EFF6FF;
+  border: 1px solid #93C5FD;
+  border-radius: 16px;
+}
+
+#hotels #list .hotel .wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 12px;
+}
+
+#hotels #list .hotel .picture {
+  position: relative;
+}
+
+#hotels #list .hotel .picture img {
+  width: 100%;
+}
+
+#hotels #list .hotel .picture span {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+#hotels #list .hotel .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+#hotels #list .hotel .content .header .name {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+
+  color: #18181B;
+}
+
+#hotels #list .hotel .content .header .location {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #52525B;
+}
+
+#hotels #list .hotel .content .header .note {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+
+  color: #27272A;
+}
+
+#hotels #list .hotel .content .header .note .stars .ok {
+  color: #EAB308;
+}
+
+#hotels #list .hotel .content .available {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #52525B;
+}
+
+#hotels #list .hotel .content .available > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+}
+
+#hotels #list .hotel .content .actions button {
+  padding: 12px 32px;
+  gap: 12px;
+  width: 100%;
+  background: #27272A;
+  border-radius: 12px;
+}
+
+#hotels #list .hotel:hover .content .actions button {
+  background: #1E40AF;
+}
+
+#hotels #pagination,
+#hotels #pagination .pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+}
+
+#hotels #pagination .summary {
+  display: none;
+}
+
+#hotels #pagination .pages {
+  gap: 8px;
+}
+
+#hotels #pagination a span {
+  display: none;
+}
+
+#hotels #pagination a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  width: 40px;
+  height: 40px;
+
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 20px;
+
+  color: #27272A;
+  text-decoration: none;
+}
+
+#hotels #pagination a.current {
+  background: #1E40AF;
+  border-radius: 20px;
+
+  color: #FFFFFF;
+}
+
+#hotels #pagination a.previous,
+#hotels #pagination a.next {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  background: #FFFFFF;
+  border: 1px solid #D4D4D8;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  #hotels {
+    padding: 20px;
+  }
+
+  #hotels #search {
+    padding: 12px;
+  }
+
+  #hotels #search form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #hotels #search form fieldset {
+    flex-direction: column;
+  }
+
+  #hotels #search form fieldset hr {
+    display: block;
+  }
+
+  #hotels #search form .actions {
+    justify-content: space-between;
+  }
+
+  #hotels #search form .label + div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #hotels #search form fieldset > .fields .field input,
+  #hotels #search form fieldset > .field input {  
+    flex-grow: 1;
+  }
+
+  #hotels #list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #hotels #list .hotel {
+    padding: 8px;
+  }
+
+  #hotels #list .hotel .wrapper {
+    flex-direction: column;
+  }
+
+  #hotels #pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    padding: 0px;
+    gap: 8px;
+  }
+
+  #hotels #pagination .summary {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: #29378C;
+  }
+
+  #hotels #pagination a span {
+    display: block;
+  }
+
+  #hotels #pagination a i {
+    display: none;
+  }
+
+  #hotels #pagination a.previous,
+  #hotels #pagination a.next {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 10px;
+
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 12px;
+  
+    width: auto;
+    height: auto;
+  }
+
+  #hotels #pagination a.next {
+    background: #1E40AF;
+    color: #FFFFFF;
+  }
+
+  #hotels #pagination .pages {
+    display: none;
   }
 }
