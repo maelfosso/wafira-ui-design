@@ -78,7 +78,14 @@
             </div>
           </fieldset>
           <div class="actions">
-            <button type="button" class="white">Plus de filtre <i class="fa-solid fa-plus"></i></button>
+            <button
+              type="button"
+              class="white"
+              data-a11y-dialog-show="hotels-search-filters"
+              onclick="showHotelFiltersDialog()"
+            >
+              Plus de filtre <i class="fa-solid fa-plus"></i>
+            </button>
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Rechercher</button>
           </div>
         </form>
@@ -241,6 +248,113 @@
         </a href="#">
       </section>
     </section>
+    <section id="hotels-search-filters" class="dialog-container"
+      aria-hidden="true"
+      aria-labelledby="my-dialog-title"
+      aria-describedby="my-dialog-description"
+    >
+      <div class="dialog-overlay" data-a11y-dialog-hide></div>
+      <!-- <div class="dialog-content" role="document"> -->
+      <div class="content dialog-content">
+        <button
+          class="icon close-auth dialog-close"
+          data-a11y-dialog-hide
+          aria-label="Close this dialog window"
+          onclick="hideHotelFiltersDialog()"
+        >
+          <i class="fa-solid fa-xmark fa-lg"></i>
+          <!-- &times; -->
+        </button>
+        <div class="filters">
+          <header>
+            <h2>Filtrez votre recherche</h2>
+            <p>Affinez les resultats de vos recherches</p>
+          </header>
+          <form>
+            <fieldset>
+              <div class="title">Fourchette de prix</div>
+              <div class="fields">
+                <div class="input">
+                  <label for="min-price">Prix minimum</label>
+                  <input type="text" id="min-price" value="€ 0"/>
+                </div>
+                <div class="input">
+                  <label for="max-price">Prix maximum</label>
+                  <input type="text" id="max-price" value="€ 4000"/>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="big-title">
+                Classement par étoiles
+                <span>(04 étoiles selectionnées)</span>
+              </div>
+              <div class="sub-title">Selectionnez une ou plusieurs étoiles</div>
+
+            </fieldset>
+            <div class="big-title">Equipements inclus</div>
+            <fieldset>
+              <div class="title">Produits et services de base</div>
+              <div class="fields">
+                <div class="checkbox">
+                  <input type="checkbox" id="0-arret"/>
+                  <label for="0-arret">Wi-Fi</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="1-arret"/>
+                  <label for="1-arret">Climatisation</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="01-arreter"/>
+                  <label for="01-arreter">Cuisine</label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="title">Caractéristiques</div>
+              <div class="fields">
+                <div class="checkbox">
+                  <input type="checkbox" id="piscine"/>
+                  <label for="piscine">Piscine</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="jacuzzi"/>
+                  <label for="jacuzzi">Jacuzzi</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="lit-pour-bebe"/>
+                  <label for="lit-pour-bebe">Lit pour bébé</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="stationnement"/>
+                  <label for="stationnement">Stationnement</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="annulation-gratuite"/>
+                  <label for="annulation-gratuite">Annulation gratuite</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="bord-de-mer"/>
+                  <label for="bord-de-mer">Bord de mer</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="logement-fumeur"/>
+                  <label for="logement-fumeur">Logement fumeur</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="salle-de-sport"/>
+                  <label for="salle-de-sport">Salle de sport</label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="buttons">
+              <button class="light">Reinitialiser</button>
+              <button>Afficher 88 résultats</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <footer>
       <nav>
         <div>
@@ -318,5 +432,15 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/a11y-dialog@7/dist/a11y-dialog.min.js"></script>
+    <script>
+      const container = document.querySelector('#hotels-search-filters');
+      const dialog = new A11yDialog(container);
+      dialog.on('show', function (dialogEl, event) {
+        console.log(dialogEl);
+        console.log(event);
+      });
+    </script>
   </body>
 </html>

@@ -132,12 +132,15 @@ button.circle i {
 button.icon {
   border: none;
   background: none;
+  color: #52525B;
 }
 
 button.light {
   color: #1E40AF;
   background: #FFFFFF;
   font-weight: 700;
+  padding: 0;
+  align-self: center;
 }
 
 button.white {
@@ -155,6 +158,43 @@ button.white {
 
 .no-pad-bottom {
   padding-bottom: 0 !important;
+}
+
+/* Ally dialog */
+.dialog-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.dialog-container[aria-hidden='true'] {
+  display: none !important;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(43, 46, 56, 0.9);
+  animation: fade-in 200ms both;
+}
+
+.dialog-content {
+  /* background-color: rgb(255, 255, 255); */
+  margin: auto;
+  z-index: 2;
+  position: relative;
+  animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
+  padding: 1em;
+  max-width: 90%;
+  width: 600px;
+  border-radius: 2px;
 }
 
 /* Header */
@@ -2327,7 +2367,7 @@ section#flights-search-filters {
   margin: 0 auto; */
 }
 
-section#flights-search-filters  .close-auth {
+section#flights-search-filters .close-auth {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3949,4 +3989,185 @@ https://www.figma.com/file/PFym9VLA8xBX5gHSzHxs84/Warfira?node-id=63%3A1915&t=pP
   #hotels #pagination .pages {
     display: none;
   }
+}
+
+/*
+Hotels Search Filters
+*/
+section#hotels-search-filters {
+  /* background-color: #27272A; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 8px;
+
+  /* background: transparent; */
+  /* width: 50%;
+  margin: 0 auto; */
+}
+
+section#hotels-search-filters .close-auth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  padding: 16px;
+  gap: 10px;
+
+  width: 48px;
+  height: 48px;
+
+  background: #FFFFFF;
+  border-radius: 100px;
+  opacity: 1;
+
+  cursor: pointer;
+}
+
+section#hotels-search-filters .content {
+  width: 50%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 0px;
+  gap: 8px;
+}
+
+section#hotels-search-filters header h2 {
+  font-size: 27px;
+  line-height: 120%;
+  color: #1E3A8A;
+  font-weight: 400;
+}
+
+section#hotels-search-filters header p {
+  font-size: 14px;
+  line-height: 120%;
+  color: #71717A;
+}
+
+section#hotels-search-filters .content .filters {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 20px;
+  gap: 32px;
+
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+section#hotels-search-filters .content .filters form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* padding: 20px; */
+  gap: 32px;
+
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+section#hotels-search-filters .content .filters form fieldset {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+  border: none;
+}
+
+section#hotels-search-filters .content .filters form .big-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+section#hotels-search-filters .content .filters form .big-title span {
+  font-weight: 400;
+  color: #2563EB;
+}
+
+section#hotels-search-filters .content .filters form .sub-title {
+  font-size: 16px;
+  line-height: 120%;
+  color: #A1A1AA;
+}
+
+section#hotels-search-filters .content .filters form fieldset .title {
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #27272A;
+}
+
+section#hotels-search-filters .content .filters form fieldset .fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+section#hotels-search-filters .content .filters form fieldset .fields .input {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 4px 12px;
+
+  /* width: 49%; */
+  flex-grow: 1;
+  border: 1px solid #2563EB;
+  border-radius: 12px;
+}
+
+section#hotels-search-filters .content .filters form fieldset .fields .checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  flex-grow: 1;
+  flex-basis: 49%;
+  /* width: 48%; */
+}
+
+section#hotels-search-filters .content .filters form fieldset .fields .checkbox label {
+  font-size: 14px;
+  line-height: 120%;
+  color: #71717A;
+}
+
+section#hotels-search-filters .content .filters form fieldset .fields .input label {
+  font-size: 16px;
+  line-height: 24px;
+  color: #A1A1AA;
+}
+
+section#hotels-search-filters .content .filters form fieldset .fields .input input {
+  font-size: 14px;
+  line-height: 120%;
+  color: #27272A;
+  border: none;
+  outline: none;
+}
+
+section#hotels-search-filters .content .filters form .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
