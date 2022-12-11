@@ -4139,9 +4139,9 @@ section#hotels-search-filters .content .filters form fieldset .fields .checkbox 
   align-items: center;
   padding: 0px;
   gap: 8px;
-  flex-grow: 1;
-  flex-basis: 49%;
-  /* width: 48%; */
+  /* flex-grow: 1;
+  flex-basis: 49%; */
+  width: 48%;
 }
 
 section#hotels-search-filters .content .filters form fieldset .fields .checkbox label {
@@ -4170,4 +4170,10 @@ section#hotels-search-filters .content .filters form .buttons {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  section#hotels-search-filters .content {
+    width: 100%;
+  }
 }
