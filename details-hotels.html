@@ -1,0 +1,381 @@
+<html>
+  <head>
+    <title>Warfira</title>
+    <!-- META-DATA -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/021511bd83.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo">
+          <img src = "images/logo.svg" alt="Warfira"/>
+        </div>
+        <div id="menu">
+          <ul>
+            <li>Hôtels</li>
+            <li>Gérez votre établissement <span class="soon">(bientôt)</span></li>
+            <li>A propos de nous</li>
+          </ul>
+        </div>
+        <div id="others">
+          <ul>
+            <li>
+              <div>
+                <img src = "images/lang-fr.svg" alt="Fr"/>
+                <img src="images/caret-down.svg" alt="" />
+              </div>
+            <li>
+              <div>
+                <img src="images/euro.svg" alt="Euro" />
+                Euro
+                <img src="images/caret-down.svg" alt="" />
+              </div>
+            </li>
+          </ul>
+          <div id="sign">
+            <button type="button">S'identifier</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="details-hotels">
+      <header>
+        <h1>Hôtel Demeure Les Mouettes</h1>
+        <div class="sub-title">Lyon (France)</div>
+      </header>
+      <article id="images">
+        <img src="images/hotel-beausejour.svg" alt=""/>
+        <img src="images/hotel-bercy-village.svg" alt=""/>
+        <img src="images/hotel-golden-tsuip.svg" alt=""/>
+        <img src="images/hotel-maldive.svg" alt=""/>
+        <img src="images/hotel-menthon.svg" alt=""/>
+      </article>
+      <section id="details">
+        <article>
+          <section id="description">
+            <header>
+              <h1>Description</h1>
+            </header>
+            <div class="content">
+              <p>Faites-vous plaisir en profitant des massages, des soins du corps et des soins du visage proposés sur place. Les équipements supplémentaires de cet hôtel comprennent l'accès gratuit à Internet sans fil, des services de conciergerie et un salon de coiffure.Satisfaites votre appétit pour le déjeuner ou le dîner au restaurant de l'hôtel, ou restez sur place et profitez du service d'étage disponible 24 heures sur 24. Rencontrez d'autres clients lors de la réception gratuite, organisée tous les jours. Étanchez votre soif avec votre boisson préférée au bar/salon. Des petits-déjeuners complets sont disponibles tous les jours de 7h à 10h moyennant des frais. Les équipements proposés incluent des services de nettoyage à sec et de blanchisserie, une réception ouverte 24h/24 et un personnel multilingue. Les équipements pour événements de cet hôtel comprennent un centre de conférence et une salle de réunion. Une navette aéroport aller-retour est gratuite (disponible 24 heures sur 24).Faites comme chez vous dans l'une des 35 chambres climatisées équipées de télévisions à écran plasma. L'accès Internet sans fil gratuit vous permet de rester connecté, et des programmes câblés sont disponibles pour votre divertissement. Les salles de bains privées sont équipées de baignoires profondes et d'articles de toilette gratuits. Les distances sont indiquées au kilomètre et au mile les plus proches.</p>
+              <br />
+              <p>En séjournant à l'Hôtel Vallée des rois à Douala, vous serez à 7,8 km de La Nouvelle Liberté et à 8,4 km du Stade de la Réunification. Cet hôtel spa se trouve à 9,7 km de l'Eko Market et à 11,5 km de la cathédrale des Saints Pierre et Paul.</p>
+            </div>
+          </section>
+          <section id="available">
+            <header>
+              <h2>Ce que propose cette chambre</h2>
+            </header>
+            <div class="content">
+              <div><i class="fa-solid fa-wifi"></i> <span>Wi-Fi gratuit</span></div>
+              <div><i class="fa-solid fa-water-ladder"></i> <span>Piscine</span></div>
+              <div><i class="fa-solid fa-utensils"></i> Restaurant</div>
+              <div><i class="fa-solid fa-car"></i> Parking</div>
+              <div><i class="fa-solid fa-fish"></i> Animaux acceptés</div>
+            </div>
+          </section>
+          <section id="map">
+            <header>
+              <h2>Où se situe votre hôtel</h2>
+            </header>
+            <div class="content"></div>
+          </section>
+        </article>
+        <article class="pricing">
+          <div class="price">
+            <div class="amount">140 €/nuit</div>
+            <hr />
+            <div>
+              <span>Annulation gratuite</span>
+              <span>Jusqu’au 20 octobre 2022</span>
+            </div>
+          </div>
+          <div>
+            <form class="reservation">
+              <fieldset>
+                <div class="field">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <div>
+                    <label for="arrival">Date d'arrivée</label>
+                    <input type="date" name="arrival" id="arrival"/>
+                  </div>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <hr />
+                <div class="field">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <div>
+                    <label for="departure">Date de départ</label>
+                    <input type="date" name="departure" id="departure" />
+                  </div>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <hr />
+                <div class="field multiple">
+                  <div>
+                    <label for="travellers">Nombre de voyageurs</label>
+                    <select name="travellers">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="travellers-confirmation">
+                    02 voyageurs ?
+                  </div>
+                </div>
+              </fieldset>
+              <div class="actions">
+                <button type="submit">Confirmer ma reservation <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </form>
+            <div class="final">
+              <div class="details">
+                <div>Détails</div>
+                <div>
+                  <span>140 € * 2</span>
+                  <span>280 €</span>
+                </div>
+              </div>
+              <hr />
+              <div class="total">
+                <span>Total</span>
+                <span>280 €</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <article id="similar-rooms">
+        <header>
+          <h2>Chambres d’hôtels similaires</h2>
+        </header>
+        <div class="nav-icons">
+          <button class="icon left"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="icon right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div id="list">
+          <div class="hotel">
+            <div class="wrapper">
+              <div class="picture">
+                <img src="images/hotel-mouettes.svg" />
+                <span>€ 140 en moyenne / nuit</span>
+              </div>
+              <div class="content">
+                <div class="header">
+                  <div class="name">Hôtel Demeure Les Mouettes</div>
+                  <div class="location">Ajaccio (Corse)</div>
+                  <div class="note">
+                    <div class="stars">
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="notice">8.7 avis Excellent(1046 avis)</div>
+                  </div>
+                </div>
+                <div class="available">
+                  <div><i class="fa-solid fa-wifi"></i> Wi-Fi gratuit</div>
+                  <div><i class="fa-solid fa-water-ladder"></i> Piscine</div>
+                  <div><i class="fa-solid fa-utensils"></i> Restaurant</div>
+                  <div><i class="fa-solid fa-car"></i> Parking</div>
+                  <div><i class="fa-solid fa-fish"></i> Animaux acceptés</div>
+                </div>
+                <div class="actions">
+                  <button type="button">Reserver <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hotel">
+            <div class="wrapper">
+              <div class="picture">
+                <img src="images/hotel-golden-tsuip.svg" />
+                <span>€ 108 en moyenne / nuit</span>
+              </div>
+              <div class="content">
+                <div class="header">
+                  <div class="name">Golden Tulip Aix les Bains</div>
+                  <div class="location">Ajaccio (Corse)</div>
+                  <div class="note">
+                    <div class="stars">
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="notice">8.7 avis Excellent(1046 avis)</div>
+                  </div>
+                </div>
+                <div class="available">
+                  <div><i class="fa-solid fa-wifi"></i> Wi-Fi gratuit</div>
+                  <div><i class="fa-solid fa-water-ladder"></i> Piscine</div>
+                  <div><i class="fa-solid fa-utensils"></i> Restaurant</div>
+                  <div><i class="fa-solid fa-car"></i> Parking</div>
+                  <div><i class="fa-solid fa-fish"></i> Animaux acceptés</div>
+                </div>
+                <div class="actions">
+                  <button type="button">Reserver <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hotel">
+            <div class="wrapper">
+              <div class="picture">
+                <img src="images/hotel-menthon.svg" />
+                <span>€ 159 en moyenne / nuit</span>
+              </div>
+              <div class="content">
+                <div class="header">
+                  <div class="name">Place de Menthon</div>
+                  <div class="location">Ajaccio (Corse)</div>
+                  <div class="note">
+                    <div class="stars">
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="notice">8.7 avis Excellent(1046 avis)</div>
+                  </div>
+                </div>
+                <div class="available">
+                  <div><i class="fa-solid fa-wifi"></i> Wi-Fi gratuit</div>
+                  <div><i class="fa-solid fa-water-ladder"></i> Piscine</div>
+                  <div><i class="fa-solid fa-utensils"></i> Restaurant</div>
+                  <div><i class="fa-solid fa-car"></i> Parking</div>
+                  <div><i class="fa-solid fa-fish"></i> Animaux acceptés</div>
+                </div>
+                <div class="actions">
+                  <button type="button">Reserver <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hotel">
+            <div class="wrapper">
+              <div class="picture">
+                <img src="images/hotel-maldive.svg" />
+                <span>€ 37 en moyenne / nuit</span>
+              </div>
+              <div class="content">
+                <div class="header">
+                  <div class="name">Domaine des maldives</div>
+                  <div class="location">Yaounde (Cameroun)</div>
+                  <div class="note">
+                    <div class="stars">
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-solid fa-star ok"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="notice">8.7 avis Excellent(1046 avis)</div>
+                  </div>
+                </div>
+                <div class="available">
+                  <div><i class="fa-solid fa-wifi"></i> Wi-Fi gratuit</div>
+                  <div><i class="fa-solid fa-water-ladder"></i> Piscine</div>
+                  <div><i class="fa-solid fa-utensils"></i> Restaurant</div>
+                  <div><i class="fa-solid fa-car"></i> Parking</div>
+                  <div><i class="fa-solid fa-fish"></i> Animaux acceptés</div>
+                </div>
+                <div class="actions">
+                  <button type="button">Reserver <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <nav>
+        <div>
+          <h4><img src="images/logo.svg" alt="Logo" /></h4>
+          <div>
+            Warfira propose un écosystème, une communauté d'établissements hôteliers ou, se développent des échanges en réseau, nous parlons clairement de notre marketing digital.
+          </div>
+          <div>
+            <button type="button">
+              <img src="images/lang-fr.svg" alt="lang-fr" />
+              Français
+              <img src="images/carret-down.svg" alt="carret down" />
+            </button>
+          </div>
+        </div>
+        <div>
+          <h4>Nos services</h4>
+          <ul>
+            <li><a>Vols</a></li>
+            <li><a>Hôtels</a></li>
+            <li><a>Extranet</a></li>
+            <li><a>Gérez votre établissement</a></li>
+            <li><a>A propos de nous</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Légales</h4>
+          <ul>
+            <li><a>Conditions et services</a></li>
+            <li><a>Conditions générales</a></li>
+            <li><a>Témoignages</a></li>
+            <li><a>Politique de confidentialité</a></li>
+            <li><a>Accord de l'utilisateur</a></li>
+            <li><a>Politique de non responsabilité</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              contact@warfira.com
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              +33 753584725 / +237 693 363 427
+            </li>
+            <li>
+              <i class="fa-solid fa-house"></i>
+              <div>
+                <p>
+                  WARFIRA CAMEROUN
+                  Boulevard de la liberte
+                  BP 1822 Douala
+                  (CAMEROUN)
+                </p>
+                <p>
+                  7 place prairial 93270 Sevran
+                  (FRANCE) 
+                </p>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <hr />
+      <div class="mentions">
+        <div class="copyright">© 2022 - 2023 Warfira. Tout droits reservés</div>
+        <div class="social-media">
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-vk"></i>
+          <i class="fa-brands fa-telegram"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
