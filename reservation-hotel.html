@@ -91,22 +91,30 @@
                 <input type="text" placeholder="jeanjules@warfira.com" />
               </div>
             </div>
-            <div class="field checkbox">
-              <label>
-                <input type="checkbox">
-                Je possède un compte
-              </label>
-            </div>
-            <div class="field">
-              <label>Votre numéro de téléphone</label>
-              <div class="input prefix select">
-                <select>
-                  <option>CMR</option>
-                </select>
-                <input type="text" placeholder="+237 699 66 44 55" />
+            <fieldset class="phone-password">
+              <input type="checkbox" id="have-account" /> <span>Je possède un compte</span>
+
+              <div class="field phone-number">
+                <label>Votre numéro de téléphone</label>
+                <div class="input prefix select">
+                  <select>
+                    <option>CMR</option>
+                  </select>
+                  <input type="text" placeholder="+237 699 66 44 55" />
+                </div>
+                <span>Nous utiliserons ce numéro pour envoyer éventuellement des alertes de mise à jour.</span>
               </div>
-              <span>Nous utiliserons ce numéro pour envoyer éventuellement des alertes de mise à jour.</span>
-            </div>
+              <div class="field password">
+                <label>Mot de passe</label>
+                <div class="input prefix">
+                  <i class="fa-solid fa-lock"></i>
+                  <input type="password" name="password" id="password" placeholder="type your password here" />
+                  <button type="button" class="see-password icon no-pad" onclick="revealPassword(this)">
+                    <i class="fa-solid fa-eye" style="color: #1E40AF;"></i>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
             <div class="field btn">
               <button type="submit">Reserver en tant qu'invité</button>
             </div>
@@ -263,5 +271,20 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      function revealPassword(elt) {
+        var password = document.getElementById("password");
+        if (password.type === "password") {
+          document.getElementById("password").type = "text";
+          document.querySelector("#password + button i").classList.remove('fa-eye');
+          document.querySelector("#password + button i").classList.add('fa-eye-slash');
+        } else {
+          document.getElementById("password").type = "password";
+          document.querySelector("#password + button i").classList.add('fa-eye');
+          document.querySelector("#password + button i").classList.remove('fa-eye-slash');
+        }
+      }
+    </script>
   </body>
 </html>
