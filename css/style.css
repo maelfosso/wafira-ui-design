@@ -5238,3 +5238,493 @@ section#hotels-search-filters .content .filters form .buttons {
 
   color: #374151;
 }
+
+/* CONFIRMATION RESERVATION HOTEL */
+
+#confirmation-reservation-hotel {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  padding: 40px 80px;
+}
+
+#confirmation-reservation-hotel .confirmation {
+  flex-grow: 2;
+  width: 70%;
+}
+
+#confirmation-reservation-hotel .pricing {
+  flex-grow: 1;
+  width: 30%;
+}
+
+#confirmation-reservation-hotel .pricing {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 40px;
+
+  background: #FFFFFF;
+
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+
+  height: fit-content;
+}
+
+#confirmation-reservation-hotel .pricing > div:last-child {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 60px;
+}
+
+#confirmation-reservation-hotel .pricing .price {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 8px;
+}
+
+#confirmation-reservation-hotel .pricing .price hr {
+  /* background: #E4E4E7; */
+  border: 1px solid #E4E4E7;
+}
+
+#confirmation-reservation-hotel .pricing .price .amount {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+
+  color: #1E3A8A;
+}
+
+#confirmation-reservation-hotel .pricing .price div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+#confirmation-reservation-hotel .pricing .price div:last-child span:first-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #1E40AF;
+}
+
+#confirmation-reservation-hotel .pricing .price div:last-child span:last-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #71717A;
+}
+
+#confirmation-reservation-hotel .pricing form {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 20px;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 8px;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset hr {
+  height: 1px;
+  opacity: 0.2; 
+  background: #E4E4E7;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset .field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset .field.multiple {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset .field > div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset .field.multiple > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 8px;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset .field.multiple > div:last-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #A1A1AA;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset .field label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #27272A;
+}
+
+#confirmation-reservation-hotel .pricing form fieldset .field input,
+#confirmation-reservation-hotel .pricing form fieldset .field select {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #52525B;
+
+  border: none;
+  outline: none;
+}
+
+#confirmation-reservation-hotel .pricing .final hr {
+  margin: 12px 0;
+  height: 1px;
+
+  background: #E4E4E7;
+}
+
+#confirmation-reservation-hotel .pricing .final .details {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 8px;
+}
+
+#confirmation-reservation-hotel .pricing .final .details > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+#confirmation-reservation-hotel .pricing .final .details > div:first-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #27272A;
+}
+
+#confirmation-reservation-hotel .pricing .final .details span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #52525B;
+}
+
+#confirmation-reservation-hotel .pricing .final .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#confirmation-reservation-hotel .pricing .final .total span:first-child {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+
+  color: #1E40AF;
+}
+
+#confirmation-reservation-hotel .pricing .final .total span:last-child {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #2563EB;
+}
+
+
+#confirmation-reservation-hotel .confirmation {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 20px;
+}
+
+#confirmation-reservation-hotel .confirmation .content form {
+  flex-grow: 1;
+}
+
+#confirmation-reservation-hotel .confirmation .content {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 20px;
+}
+
+#confirmation-reservation-hotel .confirmation .header h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  color: #29378C;
+}
+
+#confirmation-reservation-hotel .confirmation form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+  border: none;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset .field {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset .field.coupon button {
+  border-radius: 12px;
+  padding: 16px;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset div label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #52525B;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset div .input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 4px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset div .input.suffix.button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset div .input.suffix.button input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 4px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset > div .input input,
+#confirmation-reservation-hotel .confirmation form fieldset > div .input select {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset > div .input input {
+  width: 100%;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset > div .input select,
+#confirmation-reservation-hotel .confirmation form fieldset > div .input i {
+  width: auto;
+}
+#confirmation-reservation-hotel .confirmation form fieldset > div .input.prefix {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+
+  color: #A1A1AA;
+}
+
+#confirmation-reservation-hotel .confirmation form fieldset > div .input.prefix i {
+  color: #A1A1AA;
+}
+
+#confirmation-reservation-hotel .confirmation .content .fees-details,
+section#booking-flight .step-payment .content .fees-details {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 16px;
+  /* gap: 32px; */
+
+  background: #FFFFFF;
+
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  height: min-content;
+}
+
+#confirmation-reservation-hotel .confirmation .content .fees-details > div,
+section#booking-flight .step-payment .content .fees-details > div {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* padding: 16px; */
+  gap: 32px;
+}
+
+#confirmation-reservation-hotel .confirmation .content .fees-details > div > div,
+section#booking-flight .step-payment .content .fees-details > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#confirmation-reservation-hotel .confirmation .content .fees-details > div > div .more > div,
+section#booking-flight .step-payment .content .fees-details > div > div .more > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #52525B;
+}
+
+#confirmation-reservation-hotel .confirmation .content .fees-details > div:first-child .price .more .amount,
+section#booking-flight .step-payment .content .fees-details > div:first-child .price .more .amount {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+#confirmation-reservation-hotel .confirmation .content .fees-details > div:first-child .price > div:first-child,
+section#booking-flight .step-payment .content .fees-details > div:first-child .price > div:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+
+  color: #1E3A8A;
+}
+
+#confirmation-reservation-hotel .confirmation .content hr,
+section#booking-flight .step-payment .content hr {
+  background: #E4E4E7;
+  height: 1;
+  margin: 5px 0;
+}
+
+#confirmation-reservation-hotel .confirmation .content > div:first-child .details > div:first-child,
+section#booking-flight .step-payment .content > div:first-child .details > div:first-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+
+  color: #27272A;
+}
+
+#confirmation-reservation-hotel .confirmation .content .bank-card,
+#confirmation-reservation-hotel .confirmation .content .mtn-orange-money > div {
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  gap: 12px;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 10px;
+}
+
+#confirmation-reservation-hotel .confirmation .content .bank-card {
+  flex-direction: column;
+}
+
+#confirmation-reservation-hotel .confirmation .content .payment-means .active {
+  border: 1px solid #2563EB;
+}
+
+#confirmation-reservation-hotel .confirmation .content .bank-card > .field:first-child .checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+#confirmation-reservation-hotel .confirmation .content .terms-of-service {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #52525B;
+}
+
+#confirmation-reservation-hotel .confirmation .content .terms-of-service label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #27272A;
+}
+
+#confirmation-reservation-hotel .confirmation .nav {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+  width: 50%;
+}
+
+#confirmation-reservation-hotel .confirmation .nav > button {
+  flex-grow: 1;
+}
