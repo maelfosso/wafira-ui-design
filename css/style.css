@@ -4204,12 +4204,60 @@ section#hotels-search-filters .content .filters form .buttons {
 
 #details-hotels #images {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
-  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 15px;
 }
 
-#details-hotels #images > div:first-child,
+#details-hotels #images figure {
+  display: flex;
+}
+
+#details-hotels #images figure.item-2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#details-hotels #images figure.item-3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#details-hotels #images figure.item-4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#details-hotels #images figure.item-5 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#details-hotels #images figure.item-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+
+#details-hotels #images figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* #details-hotels #images > div:first-child,
 #details-hotels #images > img:first-child {
   grid-row: 1 / 3;
   grid-column: 1 / 2;
@@ -4224,12 +4272,12 @@ section#hotels-search-filters .content .filters form .buttons {
 }
 
 #details-hotels #images div img {
-  /* display: none; */
+  display: none;
   width:100%;
   height:100%;
   object-fit: cover;
   overflow: hidden;
-}
+} */
 
 #details-hotels #description header h1 {
   font-weight: 700;
@@ -4263,15 +4311,15 @@ section#hotels-search-filters .content .filters form .buttons {
 #details-hotels #details .pricing {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   padding: 16px;
   gap: 40px;
 
   background: #FFFFFF;
-  /* shadow-lg */
 
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
+
+  height: fit-content;
 }
 
 #details-hotels #details .pricing > div:last-child {
@@ -4490,13 +4538,15 @@ section#hotels-search-filters .content .filters form .buttons {
   align-items: center;
 }
 
-#details-hotels #map header h2 {
+#details-hotels #location header h2 {
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
 
   color: #27272A;
 }
+
+#details-hotels #location .content #map { height: 180px; }
 
 #details-hotels #similar-rooms {
   display: flex;
