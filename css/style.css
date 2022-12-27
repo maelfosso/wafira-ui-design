@@ -4461,6 +4461,35 @@ section#hotels-search-filters .content .filters form .buttons {
   border-radius: 12px;
 }
 
+/* #details-hotels #details .pricing .final .details {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 8px;
+}
+
+#details-hotels #details .pricing .final .details > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+#details-hotels #details .pricing .final .details > div:first-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #27272A;
+}
+
+#details-hotels #details .pricing .final .details span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: #52525B;
+} */
+
 #details-hotels #details .pricing .final hr {
   margin: 12px 0;
   height: 1px;
@@ -4693,6 +4722,17 @@ section#hotels-search-filters .content .filters form .buttons {
 
   background: transparent;
   color: #27272A;
+}
+
+@media only screen and (max-width: 768px) {
+  #details-hotels {
+    padding: 40px 20px;
+  }
+
+  #details-hotels #details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 /* RESERVATION HOTEL */
