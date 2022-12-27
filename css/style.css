@@ -5727,4 +5727,22 @@ section#booking-flight .step-payment .content > div:first-child .details > div:f
 
 #confirmation-reservation-hotel .confirmation .nav > button {
   flex-grow: 1;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  #confirmation-reservation-hotel {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+  }
+
+  #confirmation-reservation-hotel .pricing,
+  #confirmation-reservation-hotel .confirmation {
+    width: 100%;
+  }
+
+  #confirmation-reservation-hotel .confirmation .nav {
+    width: 100%;
+  }
 }
