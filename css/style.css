@@ -5053,7 +5053,7 @@ section#hotels-search-filters .content .filters form .buttons {
   flex-direction: column;
   padding: 0px;
   gap: 20px;
-  width: 50%;
+  width: 75%;
 }
 
 #reservation-hotel .hotel form fieldset {
@@ -5277,6 +5277,340 @@ section#hotels-search-filters .content .filters form .buttons {
   text-align: center;
 
   color: #374151;
+}
+
+#reservation-hotel #responsive {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #reservation-hotel {
+    padding: 40px 20px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #reservation-hotel .pricing {
+    width: 100%;
+  }
+
+  #reservation-hotel #responsive {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  #reservation-hotel .hotel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 20px;
+  }
+
+  #reservation-hotel .hotel * {
+    width: 100%;
+  }
+
+  #reservation-hotel .hotel .details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #reservation-hotel .hotel .details .content .description,
+  #reservation-hotel .hotel .details .content .available,
+  #reservation-hotel .hotel .details .content .header .note,
+  #reservation-hotel .hotel form {
+    display: none;
+  }
+
+  #reservation-hotel .hotel .details .content .header .name {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+
+    color: #000047;
+  }
+
+  #reservation-hotel .hotel .details .content .header .location {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+
+    color: #52525B;
+  }
+
+  #reservation-hotel #responsive .hotel .description .title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+
+    color: #29378C;
+  }
+
+  #reservation-hotel #responsive .hotel .description div:last-child {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+
+    color: #71717A;
+  }
+
+  #reservation-hotel #responsive .hotel .availables {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 12px;
+  }
+
+  #reservation-hotel #responsive .hotel .availables .title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #27272A;
+  }
+
+  #reservation-hotel #responsive .hotel .availables div:last-child div {
+    display: grid;
+    grid-template-columns: 23px auto;
+    grid-gap: 0;
+    align-items: center;
+  }
+
+  #reservation-hotel #responsive form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 20px;
+    /* width: 75%; */
+  }
+
+  #reservation-hotel #responsive form fieldset {
+    border: none;
+    width: 100%;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill legend {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+
+    color: #27272A;
+
+    margin-bottom: 20px;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 8px;
+    width: 100%;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+
+    color: #27272A;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field.checkbox label {
+    color: #1E40AF;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field.checkbox input {
+    outline: #1E40AF;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+
+    color: #52525B;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field .input input,
+  #reservation-hotel #responsive form fieldset.fill .field select {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field .input select,
+  #reservation-hotel #responsive form fieldset.fill .field .input i {
+    width: auto;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field .input.prefix {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+
+    color: #A1A1AA;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field .input.prefix i {
+    color: #A1A1AA;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field .input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 12px;
+    gap: 4px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E4E4E7;
+    border-radius: 12px;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill .field.btn button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 16px;
+    gap: 8px;
+
+    background: #1E40AF;
+    border-radius: 12px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+
+    color: #FFFFFF;
+    width: 100%;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill fieldset.phone-password {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+    gap: 16px;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill fieldset.phone-password > span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #1E40AF;
+    flex-grow: 1;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill fieldset.phone-password .field.password {
+    display: none;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill fieldset.phone-password .field.password input {
+    color: #A1A1AA;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill fieldset.phone-password input#have-account:checked {
+    background-color: red;
+    padding: 10px;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill fieldset.phone-password input#have-account:checked ~ .field.phone-number {
+    display: none;
+  }
+
+  #reservation-hotel #responsive form fieldset.fill fieldset.phone-password input#have-account:checked ~ .field.password {
+    display: flex;
+  }
+
+  #reservation-hotel #responsive form fieldset.sn legend {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+
+    text-align: center;
+
+    color: #27272A;
+
+    display: contents;
+  }
+
+  #reservation-hotel #responsive form fieldset.sn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+  }
+
+  #reservation-hotel #responsive form fieldset.sn .sn-btns {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    padding: 0px;
+    gap: 8px;
+    width: 100%;
+  }
+
+  #reservation-hotel #responsive form fieldset.sn .sn-btns > * {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  #reservation-hotel #responsive form fieldset.sn .sn-btns .facebook {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+
+    background: #1A79E9;
+    border-radius: 12px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  #reservation-hotel #responsive form fieldset.sn .sn-btns .google {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D2D6DC;
+    border-radius: 12px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+
+    text-align: center;
+
+    color: #374151;
+  }
+
+
 }
 
 /* CONFIRMATION RESERVATION HOTEL */

@@ -193,6 +193,75 @@
           </div>
         </div>
       </article>
+      <article id="responsive">
+        <div class="hotel">
+          <div class="description">
+            <div class="title">Description</div>
+            <div>
+              Faites-vous plaisir en profitant des massages, des soins du corps et des soins du visage proposés sur place. Les équipements supplémentaires de cet hôtel comprennent l'accès gratuit à Internet sans fil, des services de conciergerie et un salon de coiffure
+            </div>
+          </div>
+          <div class="availables">
+            <div class="title">Ce que propose cette chambre</div>
+            <div>
+              <div><i class="fa-solid fa-wifi"></i> Wi-Fi gratuit</div>
+              <div><i class="fa-solid fa-water-ladder"></i> Piscine</div>
+              <div><i class="fa-solid fa-utensils"></i> Restaurant</div>
+              <div><i class="fa-solid fa-car"></i> Parking</div>
+              <div><i class="fa-solid fa-fish"></i> Animaux acceptés</div>
+            </div>
+          </div>
+        </div>
+
+        <form>
+          <fieldset class="fill">
+            <legend>Connectez-vous maintenant pour réserver en ligne</legend>
+
+            <div class="field">
+              <label>Votre ID Courrier</label>
+              <span>Vos détails de réservation seront envoyées à cette adresse e-mail.</span>
+              <div class="input prefix">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="jeanjules@warfira.com" />
+              </div>
+            </div>
+            <fieldset class="phone-password">
+              <input type="checkbox" id="have-account" /> <span>Je possède un compte</span>
+
+              <div class="field phone-number">
+                <label>Votre numéro de téléphone</label>
+                <div class="input prefix select">
+                  <select>
+                    <option>CMR</option>
+                  </select>
+                  <input type="text" placeholder="+237 699 66 44 55" />
+                </div>
+                <span>Nous utiliserons ce numéro pour envoyer éventuellement des alertes de mise à jour.</span>
+              </div>
+              <div class="field password">
+                <label>Mot de passe</label>
+                <div class="input prefix">
+                  <i class="fa-solid fa-lock"></i>
+                  <input type="password" name="password" id="password" placeholder="type your password here" />
+                  <button type="button" class="see-password icon no-pad" onclick="revealPassword(this)">
+                    <i class="fa-solid fa-eye" style="color: #1E40AF;"></i>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <div class="field btn">
+              <button type="submit">Reserver en tant qu'invité</button>
+            </div>
+          </fieldset>
+          <fieldset class="sn">
+            <legend>Ou connectez-vous avec</legend>
+            <div class="sn-btns">
+              <button type="button" class="facebook"><i class="fa-brands fa-facebook"></i> Continuer avec Facebook</button>
+              <button type="button" class="google"><img src="images/google-icon.svg" alt="google icon" />  Continuer avec Google</button>
+            </div>
+          </fieldset>
+        </form>
+      </article>
     </section>
     <footer>
       <nav>
