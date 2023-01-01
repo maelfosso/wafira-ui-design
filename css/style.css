@@ -6120,3 +6120,138 @@ section#booking-flight .step-payment .content > div:first-child .details > div:f
     width: 100%;
   }
 }
+
+/* PROFILE */
+
+#profile {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 40px 80px;
+}
+
+#profile .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 46px 280px;
+  background: #FAFAFA;
+  border: 1px solid #E4E4E7;
+  border-radius: 16px;
+}
+
+#profile .menu .photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+  margin: 0px 12px 12px 12px;
+}
+
+#profile .menu .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+#profile .menu .infos > div {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
+}
+
+#profile .details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#profile .details header h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+
+  color: #27272A;
+}
+
+#profile .details header div {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+
+  color: #52525B;
+}
+
+#profile .details .call-to-action button:first-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 8px;
+  border: 1px solid #52525B;
+  border-radius: 12px;
+  color: #27272A;
+}
+
+header nav #user {
+  position: relative;
+}
+
+header nav #user #photo {
+  display: flex;
+}
+
+header nav #user #photo img {
+  width: 40px;
+  height: 40px;
+}
+
+header nav #user #menu {
+  /* display: none; */
+  position: absolute;
+  right: 0px;
+
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  gap: 32px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+header nav #user #menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 200px;
+}
+
+header nav #user #menu ul li {
+  display: flex;
+  gap: 8px;
+  padding: 12px 8px 8px;
+}
+
+header nav #user #menu ul li:hover {
+  background: #FAFAFA;
+  border-radius: 12px;
+}
+
+header nav #user #menu ul li:last-of-type {
+  padding-top: 12px;
+  border-top: 1px solid #E4E4E7;
+}
+
+header nav #user #user-photo-nav:checked ~ #menu {
+  display: flex;
+  visibility: visible;
+}
