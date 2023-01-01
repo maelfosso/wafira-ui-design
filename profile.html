@@ -69,10 +69,78 @@
           <div>Membre depuis Octobre 2022</div>
         </header>
         <div class="call-to-action">
-          <button type="button" class="white">Modifier votre profil</button>
+          <button type="button" class="white" onclick="editProfile(this)">Modifier votre profil</button>
         </div>
         </header>
-        <div class="content"></div>
+        <div class="content">
+          <form>
+            <fieldset>
+              <h2>S'il vous plaît entrer les noms des clients</h2>
+              <div class="group">
+                <div class="line">
+                  <div class="field">
+                    <label>Prénom</label>
+                    <div class="input">
+                      <input type="text" placeholder="jean jules"/>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label>Nom de famille</label>
+                    <div class="input">
+                      <input type="text" placeholder="jean jules"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <div class="line">
+                  <div class="field">
+                    <label>Votre genre</label>
+                    <div class="input">
+                      <input type="text" placeholder="jean jules"/>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label>Adresse e-mail</label>
+                    <div class="input prefix">
+                      <i class="fa-solid fa-envelope"></i>
+                      <input type="text" placeholder="jeanjules@warfira.com" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Numéro de téléphone</label>
+                <div class="input prefix select">
+                  <select>
+                    <option>CMR</option>
+                  </select>
+                  <input type="text" placeholder="+237 699 66 44 55" />
+                </div>
+              </div>
+              <div class="field">
+                <label>Adresse</label>
+                <div class="input">
+                  <input type="text" placeholder="Entrez votre adresse. Ex : Boulevard Quinichet" />
+                </div>
+              </div>
+              <div class="field password">
+                <label>Mot de passe</label>
+                <div class="input prefix">
+                  <i class="fa-solid fa-lock"></i>
+                  <input type="password" name="password" id="password" placeholder="type your password here" />
+                  <button type="button" class="see-password icon no-pad" onclick="revealPassword(this)">
+                    <i class="fa-solid fa-eye" style="color: #1E40AF;"></i>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <div class="actions">
+              <button type="button" class="save">Enregistrer</button>
+              <button type="button" class="cancel">Annuler</button>
+            </div>
+          </form>
+        </div>
       </article>
     </main>
     <footer>
@@ -152,5 +220,25 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      function editProfile(elt) {
+        document.querySelector('#profile .details .content').style.display = 'flex';
+        document.querySelector('#profile .details .call-to-action button:first-of-type').disabled = true;
+        document.querySelector('#profile .details .call-to-action button:first-of-type').classList.add('disabled');
+      }
+      function revealPassword(elt) {
+        var password = document.getElementById("password");
+        if (password.type === "password") {
+          document.getElementById("password").type = "text";
+          document.querySelector("#password + button i").classList.remove('fa-eye');
+          document.querySelector("#password + button i").classList.add('fa-eye-slash');
+        } else {
+          document.getElementById("password").type = "password";
+          document.querySelector("#password + button i").classList.add('fa-eye');
+          document.querySelector("#password + button i").classList.remove('fa-eye-slash');
+        }
+      }
+    </script>
   </body>
 </html>

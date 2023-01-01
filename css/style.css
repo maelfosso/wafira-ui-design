@@ -6168,6 +6168,7 @@ section#booking-flight .step-payment .content > div:first-child .details > div:f
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex-grow: 1;
 }
 
 #profile .details header h1 {
@@ -6196,6 +6197,13 @@ section#booking-flight .step-payment .content > div:first-child .details > div:f
   border: 1px solid #52525B;
   border-radius: 12px;
   color: #27272A;
+}
+
+#profile .details .call-to-action button.disabled {
+  color: #27272A;
+  opacity: 0.2;
+  border: 1px solid #52525B;
+  border-radius: 12px;
 }
 
 header nav #user {
@@ -6254,4 +6262,151 @@ header nav #user #menu ul li:last-of-type {
 header nav #user #user-photo-nav:checked ~ #menu {
   display: flex;
   visibility: visible;
+}
+
+#profile .details .content {
+  display: none;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 20px;
+}
+
+#profile .details .content form {
+  flex-grow: 1;
+}
+
+#profile .details form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+#profile .details form fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+  border: none;
+}
+
+#profile .details form fieldset .field {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 0px;
+  gap: 8px;
+}
+
+#profile .details form fieldset .field.coupon button {
+  border-radius: 12px;
+  padding: 16px;
+}
+
+#profile .details form fieldset h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #27272A;
+}
+
+#profile .details form fieldset div label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #52525B;
+}
+
+#profile .details form fieldset div .input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 4px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+}
+
+#profile .details form fieldset div .input.suffix.button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#profile .details form fieldset div .input.suffix.button input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 4px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+}
+
+#profile .details form fieldset > div .input input,
+#profile .details form fieldset > div .input select {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#profile .details form fieldset > div .input input {
+  width: 100%;
+}
+
+#profile .details form fieldset > div .input select,
+#profile .details form fieldset > div .input i {
+  width: auto;
+}
+#profile .details form fieldset > div .input.prefix {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+
+  color: #A1A1AA;
+}
+
+#profile .details form fieldset > div .input.prefix i {
+  color: #A1A1AA;
+}
+
+#profile .details form .actions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 50%;
+}
+
+#profile .details form .actions button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 8px;
+
+  background: #1E40AF;
+  border-radius: 12px;
+}
+
+#profile .details form .actions button.cancel {
+  border: 1px solid #A1A1AA;
+  color: #52525B;
+  background: white;
 }
